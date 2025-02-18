@@ -1,0 +1,55 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ContactComponent } from './contact/contact.component';
+
+// Step 2: Define routes for the app
+const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' }, // Default route
+  { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'projects', component: ProjectsComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: '**', redirectTo: '/home' } // Wildcard route for unknown paths
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+
+// Step 3: Update the app.module.ts file to include AppRoutingModule
+
+In your app.module.ts, add AppRoutingModule to the imports array:
+
+  import { AppRoutingModule } from './app-routing.module';
+
+  @NgModule({
+    declarations: [
+      AppComponent,
+      HomeComponent,
+      AboutComponent,
+      ProjectsComponent,
+      ContactComponent
+    ],
+    imports: [
+      BrowserModule,
+      AppRoutingModule
+    ],
+    bootstrap: [AppComponent]
+  })
+  export class AppModule { }
+
+
+// Step 4: Add navigation links in your app.component.html:
+  <nav>
+    <a routerLink="/home">Home</a>
+    <a routerLink="/about">About</a>
+    <a routerLink="/projects">Projects</a>
+    <a routerLink="/contact">Contact</a>
+  </nav>
+
+  <router-outlet></router-outlet>
