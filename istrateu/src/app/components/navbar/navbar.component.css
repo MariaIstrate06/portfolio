@@ -1,0 +1,36 @@
+.navbar{
+    padding: 1rem; 
+    display: flex;
+    justify-content: space-around;
+    gap: 2em;
+    align-items: center;
+    color: white;
+    font-family: 'Fira Code', 'Source Code Pro', monospace !important;
+}
+
+.btn-navbar {
+    position: relative; /* needed for pseudo-element */
+    color: white;
+    font-family: 'Fira Code', 'Source Code Pro', monospace !important;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 0; /* optional, for spacing */
+}
+
+.btn-navbar::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;           /* underline at the bottom */
+    transform: translateX(-50%) scaleX(0); /* start from center, invisible */
+    transform-origin: center;
+    width: 100%;
+    height: 2px;         /* thickness of underline */
+    background-color: #ca1515;
+    transition: transform 0.3s ease;
+}
+
+.btn-navbar:hover::after {
+    transform: translateX(-50%) scaleX(1); /* grow to full width */
+}

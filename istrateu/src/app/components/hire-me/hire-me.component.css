@@ -1,0 +1,45 @@
+
+/* continuous rolling band */
+.marquee {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.track {
+  display: flex;
+  animation: marquee 12s linear infinite;
+}
+
+.track span {
+  font-size: clamp(2rem, 3vw, 1rem);
+  font-weight: bold;
+  text-transform: lowercase;
+  margin-right: 2rem; /* spacing between words */
+}
+
+/* outline styles */
+.c1 {
+  color: transparent;
+  -webkit-text-stroke: 1px red;
+  opacity: 10%;
+}
+
+.c2 {
+  color: white;
+  /* -webkit-text-stroke: 1px white; */
+}
+
+.c3 {
+  color: transparent;
+  -webkit-text-stroke: 1px green;
+  opacity: 10%;
+
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-100%); }
+}

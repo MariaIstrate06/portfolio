@@ -1,12 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* removes weird whitespace below */
+}
 body, html {
     background-color: #171717;
-    margin: 0;
-    font-family: Helvetica, sans-serif;
-    color: #ffffff;
+    width: 100%;
     height: 100%;
+    font-family: 'Fira Code', 'Source Code Pro', monospace;
+    color: #f8f4ec;
 }
 app-root {
-    display: block;
-    height: 100%;
+  width: 100%;
+  min-height: 100vh; /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* center horizontally */
+  justify-content: flex-start; /* or center if you want vertical centering */
+  padding: 2rem; /* page spacing, but inside the canvas */
+}
+
+button{
+  font-family: 'Fira Code', 'Source Code Pro', monospace;
+}
+a{
+  text-decoration: none; /* remove underline */
+  color: inherit; /* inherit color from parent */
 }
