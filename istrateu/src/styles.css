@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+body, html {
+    background-color: #171717;
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    color: #ffffff;
+    height: 100%;
+}
+app-root {
+    display: block;
+    height: 100%;
+}
