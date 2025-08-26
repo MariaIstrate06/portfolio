@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgFor, NgIf } from '@angular/common';
+
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 interface SectionItem {
@@ -29,7 +29,7 @@ interface Category {
 
 @Component({
   selector: 'app-about',
-  imports: [NgFor, NgIf, HttpClientModule],
+  imports: [HttpClientModule],
   standalone: true,
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',

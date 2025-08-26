@@ -1,46 +1,59 @@
 <div class="main-page">
   <h1><b>curriculum vitae</b></h1>
   <div class="cv-accordion">
-    <div *ngFor="let category of categories" class="category">
-      <div class="category-header" (click)="toggleCategory(category)">
-        <h2>{{ category.title.toLowerCase() }}</h2>
-        <div class="expand-btn">{{ category.open ? '▲' : '▼' }}</div>
-      </div>
-
-      <div class="category-body" *ngIf="category.open">
-
-        <!-- SKILLS -->
-        <div *ngIf="category.title.toLowerCase() === 'skills'">
-          <div *ngFor="let skillCat of category.skillCategories" class="skill-category">
-            <h3>{{ skillCat.title.toLowerCase() }}</h3>
-            <div *ngFor="let item of skillCat.items" class="progress-item">
-              <div class="skill-container">
-                  <strong class="skill-title">{{ item.title.toLowerCase() }}</strong><i>{{item.description.toLowerCase()}}</i>
+    @for (category of categories; track category) {
+      <div class="category">
+        <div class="category-header" (click)="toggleCategory(category)">
+          <h2>{{ category.title.toLowerCase() }}</h2>
+          <div class="expand-btn">{{ category.open ? '▲' : '▼' }}</div>
+        </div>
+        @if (category.open) {
+          <div class="category-body">
+            <!-- SKILLS -->
+            @if (category.title.toLowerCase() === 'skills') {
+              <div>
+                @for (skillCat of category.skillCategories; track skillCat) {
+                  <div class="skill-category">
+                    <h3>{{ skillCat.title.toLowerCase() }}</h3>
+                    @for (item of skillCat.items; track item) {
+                      <div class="progress-item">
+                        <div class="skill-container">
+                          <strong class="skill-title">{{ item.title.toLowerCase() }}</strong><i>{{item.description.toLowerCase()}}</i>
+                        </div>
+                      </div>
+                    }
+                  </div>
+                }
               </div>
-            </div>
+            }
+            <!-- LANGUAGES -->
+            @if (category.title.toLowerCase() === 'languages') {
+              <div>
+                @for (item of category.section; track item) {
+                  <div class="progress-item">
+                    <div class="progress-title">{{ item.title.toLowerCase() }}</div>
+                    <div class="progress-percent" [style.width]="item.percentage"><strong>{{ item.level }}</strong></div>
+                  </div>
+                }
+              </div>
+            }
+            <!-- EVERYTHING ELSE -->
+            @if (category.title.toLowerCase() !== 'skills' && category.title.toLowerCase() !== 'languages') {
+              <div>
+                @for (item of category.section; track item) {
+                  <div class="item">
+                    <div class="section-title-container">
+                      <h3>{{ item.title.toLowerCase() }}</h3>
+                      <p class="item-period">{{ item.period }}</p>
+                    </div>
+                    <p class="section-description">{{ item.text }}</p>
+                  </div>
+                }
+              </div>
+            }
           </div>
-        </div>
-
-        <!-- LANGUAGES -->
-        <div *ngIf="category.title.toLowerCase() === 'languages'">
-          <div *ngFor="let item of category.section" class="progress-item">
-            <div class="progress-title">{{ item.title.toLowerCase() }}</div>
-            <div class="progress-percent" [style.width]="item.percentage"><strong>{{ item.level }}</strong></div>
-          </div>
-        </div>
-
-        <!-- EVERYTHING ELSE -->
-        <div *ngIf="category.title.toLowerCase() !== 'skills' && category.title.toLowerCase() !== 'languages'">
-          <div *ngFor="let item of category.section" class="item">
-            <div class="section-title-container">
-              <h3>{{ item.title.toLowerCase() }}</h3>
-              <p class="item-period">{{ item.period }}</p>
-            </div>
-            <p class="section-description">{{ item.text }}</p>
-          </div>
-        </div>
-
+        }
       </div>
-    </div>
+    }
   </div>
 </div>
