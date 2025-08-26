@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="icon">
+    @if (icon.startsWith('http')) {
+      <img [src]="icon" alt="icon" />
+    } @else if (icon.startsWith('fa')) {
+      <i [class]="icon"></i>
+    } @else {
+      <mat-icon>{{ icon }}</mat-icon>
+    }
+  </div>
+
+  <div class="content">
+    <h3 class="title">{{ title }}</h3>
+    <p class="subtitle">{{ subtitle }}</p>
+  </div>
+</div>
