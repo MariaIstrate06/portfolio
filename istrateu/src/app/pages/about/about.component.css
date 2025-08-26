@@ -54,7 +54,7 @@
   }
 .category{
     padding: 1em;
-    border-bottom: 1px solid #7ed957;
+    border-bottom: 1px solid var(--light-green);
 }
 .category:last-child {
     border-bottom: none;
@@ -74,7 +74,7 @@ h3{
     padding:0.5em;
     /* color: #d7342b */
 }
-p{
+.section-description{
     font-size: 1.2em;
     padding-left: 0.5em;
     color: #0b0b0b;
@@ -85,7 +85,45 @@ p{
     padding-left: 2em;
     padding: 1em;
 }
+.section-title-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
 
 .cv-accordion{
     width: 100%;
+}
+.item-period{
+  color: var(--passion-red);
+  font-style: italic;
+}
+
+.skill-container{
+  font-size: 1.4em;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.2em;
+  color: gray;
+  margin: 0.4em 0;
+  
+}
+.skill-title{
+  color: var(--bg);
+  font-weight: bold;
+  background: var(--light-green);
+}
+.progress-title{
+  font-size: 1.2em;
+}
+.progress-percent{
+  background-color: var(--light-green);
+  text-align: right;
+  color: var(--bg);
+  padding: 0.2em;
+}
+.progress-item{
+  margin: 0.5em 0;
 }

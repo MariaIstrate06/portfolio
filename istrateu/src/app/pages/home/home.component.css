@@ -43,7 +43,7 @@ html, body {
 
 .btn {
   font-size: 1.3em;
-  box-shadow: -5px 5px 10px purple;
+  box-shadow: -5px 5px 10px #800080;
   padding: 0.8em;
   outline: none;
   user-select: none;

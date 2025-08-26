@@ -1,0 +1,257 @@
+[
+  {
+    "title": "Work Experience",
+    "section": [
+      {
+        "title": "Frontend Engineer @ Deloitte Technologie",
+        "text": "Spearheaded the design, development, and maintenance of the user interface for 5 major projects, delivering high-quality solutions leveraging React.js and AWS, in close collaboration with the UI/UX team. Ensured that all code was meticulously structured and thoroughly documented.",
+        "period": "Nov. 2021 - Nov. 2024"
+      },
+      {
+        "title": "Fullstack Developer @ Centric IT Solutions",
+        "text": "Worked closely with seasoned engineers, contributing to both frontend and backend workflows using Angular.js and .NET as primary technologies, delivering robust and well-structured solutions across the stack.",
+        "period": "Mar. 2021 - Jul. 2021"
+      },
+      {
+        "title": "Web Developer @ Duk-Tech",
+        "text": "Maintained two WordPress websites while devising and implementing a SEO strategy, conducting in-depth research to optimize organic solutions for clients. Additionally, gained hands-on experience with the Vue.js framework while contributing to a platform in the energy sector.",
+        "period": "Nov. 2020 - Mar. 2021"
+      },
+      {
+        "title": "UI Designer @ Fix Media Advertising",
+        "text": "Delivered over five complete website wireframes using Adobe XD and Figma, while developing proficiency across the Adobe Suite, including Photoshop, Illustrator, XD, and Premiere Pro. Ensured that all products adhered to design principles, contemporary trends, and company guidelines.",
+        "period": "Mar. 2018 - Jun. 2019"
+      },
+      {
+        "title": "Data Entry Operator @ Tagonsoft",
+        "text": "Maintained data for a scholarly project promoting awareness of the Swift programming language, while gaining practical experience in mobile development through daily project support tasks.",
+        "period": "Jun. 2017 - Oct. 2020"
+      }
+    ],
+    "open": false
+  },
+  {
+    "title": "Education",
+    "section": [
+      {
+        "title": "Master's Degree - Computational Linguistics",
+        "text": "University \"Alexandru Ioan Cuza\" of Iași",
+        "period": "Graduation: 2026"
+      },
+      {
+        "title": "Bachelor's Degree - Computer Science",
+        "text": "University \"Alexandru Ioan Cuza\" of Iași",
+        "period": "Graduated: 2021"
+      },
+      {
+        "title": "High School Diploma - Mathematics & Computer Science",
+        "text": "Costache Negruzzi National College, Iași",
+        "period": "Graduated: 2018"
+      }
+    ],
+    "open": false
+  },
+  {
+    "title": "Skills",
+    "skillCategories": [
+      {
+        "title": "🖥️ Programming & Tech",
+        "subtitle": "fullstack web + devops + nlp",
+        "description": "turning ideas into responsive, performant web apps\nstrong in angular/react, fluent in js/ts, comfortable in backend & ci/cd\nthrives in linux/vim, dockerized workflows, and rapid debugging under pressure",
+        "items": [
+          {
+            "title": "Frontend Frameworks",
+            "description": "Angular (19+), React, Vue, Next.js"
+          },
+          {
+            "title": "Core Web",
+            "description": "HTML5, CSS3, Sass, Tailwind, JavaScript (ES6+), TypeScript"
+          },
+          {
+            "title": "State Management",
+            "description": "NgRx, Redux, Vuex, Zustand"
+          },
+          {
+            "title": "Backend & APIs",
+            "description": "Node.js, Express, REST API, GraphQL"
+          },
+          {
+            "title": "Databases",
+            "description": "PostgreSQL, MySQL, Firebase, MongoDB"
+          },
+          {
+            "title": "DevOps",
+            "description": "Docker, Git, GitHub Actions, CI/CD Pipelines, Nginx, Apache, Cloudflare, Hosting Migration"
+          },
+          {
+            "title": "OS & Environments",
+            "description": "Linux (daily driver), Vim Workflow, Bash Scripting, macOS, Raspberry Pi"
+          },
+          {
+            "title": "Testing & Quality",
+            "description": "Jest, Jasmine, Karma, Cypress, ESLint, Prettier"
+          },
+          {
+            "title": "Design-to-Code",
+            "description": "Figma-to-Angular, Responsive & Accessible, Performance Optimization"
+          },
+          {
+            "title": "Machine Learning",
+            "description": "Python (ML, automation/scripts), Scikit-learn, TensorFlow, PyTorch, HuggingFace Transformers, spaCy, NLTK, OpenAI/LLM APIs, Data preprocessing, Feature engineering, Model evaluation, NLP pipelines"
+          },
+          {
+            "title": "Extra",
+            "description": "Kotlin (backend), Pandas, NumPy, Algorithmics (DSA, Discrete Math, Linear Algebra)"
+          }
+        ]
+      },
+      {
+        "title": "🎨 Design & Creative",
+        "subtitle": "brand storyteller + ux-focused designer",
+        "description": "design thinking meets bold, playful aesthetics\nfigma-to-code pipelines, accessible interfaces, and motion-savvy visuals\nbuilds cohesive identities across digital, print, and social media",
+        "items": [
+          {
+            "title": "Graphic Design",
+            "description": "Adobe Photoshop, Illustrator, InDesign, Canva"
+          },
+          {
+            "title": "UI/UX",
+            "description": "Figma, Adobe XD, Prototyping, Wireframing, Usability Testing, UX Research, Portfolio Building"
+          },
+          {
+            "title": "Branding",
+            "description": "Logo Design, Color Theory, Typography, Identity Systems, Brand Storytelling"
+          },
+          {
+            "title": "Motion & Video",
+            "description": "Premiere Pro, After Effects, DaVinci Resolve, Video Editing for Events, Lyric Video Design"
+          },
+          {
+            "title": "Visual Communication",
+            "description": "Social Media Graphics, Event Visuals, Presentation Design, Creative Campaigns (e.g. CDR Ducks)"
+          },
+          {
+            "title": "Creative Direction",
+            "description": "Concept Development, Storytelling, Community Engagement through Design"
+          }
+        ]
+      },
+      {
+        "title": "🤝 Soft Skills / Business / Events",
+        "subtitle": "community-builder + event strategist",
+        "description": "proven dri, manages teams and projects end-to-end\nblends tech, design, and pr for smooth event execution\nstrong communicator (ro + en), with a knack for simplifying complexity",
+        "items": [
+          {
+            "title": "Communication",
+            "description": "Romanian & English (bilingual), Clear explanation of complex topics"
+          },
+          {
+            "title": "Leadership",
+            "description": "DRI, Team Management, Mentorship"
+          },
+          {
+            "title": "Project & Event Management",
+            "description": "Conference Planning, PR & Promotion (CDR, Blackcat Events), Workshops & Trainings"
+          },
+          {
+            "title": "Business Skills",
+            "description": "Client Management, B2B Negotiations, NGO & Small Community Consulting"
+          },
+          {
+            "title": "Problem Solving",
+            "description": "Troubleshooting Tech Setups Under Pressure"
+          },
+          {
+            "title": "Collaboration",
+            "description": "Cross-functional Work (Dev + Design + Comms), Community Building"
+          },
+          {
+            "title": "Learning",
+            "description": "Self-driven (MIT OCW, Google UX Cert, UXDI)"
+          }
+        ]
+      },
+      {
+        "title": "🎶 Music & Audio",
+        "subtitle": "studio brain + live sound wizard",
+        "description": "songwriter, sound producer, mixer, promoter\ndolby atmos mixing in logic pro, live sound with soundcraft ui24r\nbridges music culture + tech through streaming, content, and events",
+        "items": [
+          {
+            "title": "Creation",
+            "description": "Songwriting, Arranging, Performance (guitar, bass, drums, piano/midi)"
+          },
+          {
+            "title": "Production",
+            "description": "Sound Production, Mixing & Mastering, Logic Pro X(professional), Ableton Live (basics), MIDI Programming"
+          },
+          {
+            "title": "Recording & Studio",
+            "description": "Soundcraft Ui24R, Recording Instruments, Studio Acoustics Setup"
+          },
+          {
+            "title": "Live Sound",
+            "description": "PA Systems, Mic Setups, Stage Management, Livestream Audio Routing"
+          },
+          {
+            "title": "DJ & Events",
+            "description": "Serato DJ, Roland 505, Cue Management, Lyric Game Automation (Excel/Python)"
+          },
+          {
+            "title": "Promotion & Culture",
+            "description": "Music Promotion, Music Culture Expertise (emo/alt/rock, TØP lore content)"
+          }
+        ]
+      }
+    ],
+    "open": false
+  },
+  {
+    "title": "Languages",
+    "section": [
+      {
+        "title": "Romanian",
+        "percentage": "100%",
+        "level": "Native, C2"
+      },
+      {
+        "title": "English",
+        "percentage": "97%",
+        "level": "Native, C2"
+      },
+      {
+        "title": "French",
+        "percentage": "60%",
+        "level": "Intermediate, B1"
+      },
+      {
+        "title": "Italian",
+        "percentage": "30%",
+        "level": "Elementary, A2"
+      },
+      {
+        "title": "German",
+        "percentage": "20%",
+        "level": "Basic, A1"
+      }
+    ],
+    "open": false
+  },
+  {
+    "title": "Volunteering",
+    "section": [
+      {
+        "title": "TEDxIasi",
+        "text": "Part of the core organizing team for TEDxIasi 2024 & TEDxIasi Live 2025, managing social media, PR campaigns, event logistics, and media team coordination to ensure a successful conference experience."
+      },
+      {
+        "title": "Rotaract Iași",
+        "text": "Social media responsible for Rotaract Iași, creating engaging content to promote club activities and community projects."
+      },
+      {
+        "title": "ASII - Computer Science Students Association Iași",
+        "text": "Member of the board 2019-2021, Editor-in-Chief @ZiarulDeASII, PR&Media Department Coordinator, GETA Trainer"
+      }
+    ],
+    "open": false
+  }
+]
