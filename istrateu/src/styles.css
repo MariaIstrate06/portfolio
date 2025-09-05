@@ -10,6 +10,9 @@
   --light-green: #7ed957;
   --creamy-white: #f8f4ec
 }
+.main{
+  height: 100%;
+}
 img {
   max-width: 100%;
   height: auto;

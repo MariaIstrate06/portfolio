@@ -42,7 +42,7 @@
 }
 
 .skull-icon {
-  color: #8B0000; /* Dark red color */
+  color: var(--passion-red); /* Dark red color */
   opacity: 0;
   transform: translateX(-5px) scale(0.8);
   transition: opacity 0.3s ease, transform 0.3s ease;
