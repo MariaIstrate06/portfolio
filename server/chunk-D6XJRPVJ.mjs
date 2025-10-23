@@ -1,3 +1,0 @@
-import './polyfills.server.mjs';
-import{Db as s,Ta as i,rb as o,sb as n}from"./chunk-4Q5Y4QXS.mjs";import"./chunk-X2SEQXRR.mjs";var a=class e{static \u0275fac=function(t){return new(t||e)};static \u0275cmp=i({type:e,selectors:[["app-digital-builds"]],decls:2,vars:0,consts:[[1,"coming-soon"]],template:function(t,l){t&1&&(o(0,"div",0),s(1,` coming soon
-`),n())},styles:[".projects[_ngcontent-%COMP%]{display:grid;grid-template-columns:repeat(3,1fr);column-gap:4rem;row-gap:0;padding:4em;height:100vh}"]})};export{a as DigitalBuildsComponent};
