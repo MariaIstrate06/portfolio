@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+// import your JSON data directly (make sure tsconfig.json has resolveJsonModule: true)
+import cvData from './cv_data.json';
 
 interface SectionItem {
   title: string;
-  description: string;
+  description?: string;
   text?: string;
   open?: boolean;
   period?: string;
@@ -14,8 +16,8 @@ interface SectionItem {
 
 interface SkillCategory {
   title: string;
-  subtitle: string;
-  description: string;
+  subtitle?: string;
+  description?: string;
   items: SectionItem[];
 }
 
@@ -26,48 +28,56 @@ interface Category {
   open?: boolean;
 }
 
-
 @Component({
   selector: 'app-about',
-  imports: [HttpClientModule],
   standalone: true,
+  imports: [CommonModule],
   templateUrl: './about.component.html',
-  styleUrl: './about.component.css',
+  styleUrls: ['./about.component.css'], // fixed typo
 })
 export class AboutComponent implements OnInit {
   categories: Category[] = [];
 
-  constructor(private http: HttpClient) {}
-
   ngOnInit(): void {
-    this.fetchData();
-  }
+    // assign bundled JSON directly — safe for prerender
+    this.categories = (cvData as unknown) as Category[];
 
-  fetchData(): void {
-    this.http.get<Category[]>('cv_data.json').subscribe({
-      next: (data) => {
-        this.categories = data;
-        console.log(this.categories);
-      },
-      error: (err) => {
-        console.error('Failed to load CV data:', err);
-      },
+    // ensure all categories have a defined open state
+    this.categories.forEach(c => c.open = !!c.open);
+    // ensure all section items in skills/languages/others have open flag
+    this.categories.forEach(c => {
+      if (c.skillCategories) {
+        c.skillCategories.forEach(sc =>
+          sc.items.forEach(i => i.open = !!i.open)
+        );
+      }
+      if (c.section) {
+        c.section.forEach(i => i.open = !!i.open);
+      }
     });
   }
 
   toggleCategory(cat: Category) {
     cat.open = !cat.open;
   }
+
   toggleItem(item: SectionItem) {
     item.open = !item.open;
   }
-  log(value: any) {
-    console.log("LOG FUNC: ", value);
-    return value; 
-  }
-  isSkillOrLanguage(title: string): boolean {
-    console.log(title.toLowerCase() === 'skills' || title.toLowerCase() === 'languages')
-    return title.toLowerCase() === 'skills' || title.toLowerCase() === 'languages';
 
+  log(value: any) {
+    console.log('LOG FUNC: ', value);
+    return value;
+  }
+
+  isSkillOrLanguage(title: string): boolean {
+    const check = title.toLowerCase() === 'skills' || title.toLowerCase() === 'languages';
+    console.log(check);
+    return check;
+  }
+
+  // helper for *ngFor trackBy
+  trackByTitle(index: number, item: any) {
+    return item?.title ?? index;
   }
 }
