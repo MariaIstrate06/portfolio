@@ -34,3 +34,9 @@
 .btn-navbar:hover::after {
     transform: translateX(-50%) scaleX(1); /* grow to full width */
 }
+
+@media (max-width: 768px) {
+  .btn-navbar{
+    font-size: 0.5em;
+  }
+}

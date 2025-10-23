@@ -44,3 +44,18 @@ a{
 }
 html, body { height: 100%; }
 
+.coming-soon{
+  display: flex;
+  color: var(--light-green);
+  height: 70%;
+  font-weight: 900;
+  font-size: 4em;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .coming-soon{
+    font-size: 2em;
+  }
+}

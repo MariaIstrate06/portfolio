@@ -39,6 +39,7 @@ html, body {
   width: 100%;
   max-width: 600px;
   text-align: left;
+  color: var(--light-green)
 }
 
 .btn {
@@ -64,4 +65,59 @@ a {
 }
 .signature{
   text-align: end;
+}
+@media (max-width: 768px) {
+  html, body {
+    padding: 1.5em;
+  }
+
+  .main-page {
+    grid-template-columns: 1fr;      /* collapse columns */
+    grid-template-rows: auto auto;   /* switch to rows */
+    place-items: center;             /* center items horizontally */
+    gap: 1.5rem;
+  }
+
+  .left, .right {
+    width: 100%;
+    align-items: center;             /* better stacking on small screens */
+    justify-content: center;
+    text-align: center;
+  }
+
+  .left {
+    padding: 0 1rem;
+  }
+
+  .description {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .x-logo {
+    width: 60%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .signature {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Optional smaller breakpoint for very small phones */
+@media (max-width: 420px) {
+  html, body {
+    padding: 1rem;
+  }
+
+  .x-logo {
+    width: 80%;
+  }
+
+  .btn {
+    font-size: 1.1em;
+    padding: 0.6em;
+  }
 }

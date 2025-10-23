@@ -1,4 +1,4 @@
-<div class="card" [routerLink]="link">
+<div class="card" [routerLink]="['/', link]">
   <div class="icon">
     @if (icon.startsWith('http')) {
       <img [src]="icon" alt="icon" />

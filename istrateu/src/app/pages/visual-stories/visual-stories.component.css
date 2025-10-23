@@ -1,0 +1,10 @@
+.main-vs{
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+@media (max-width: 768px) {
+  .main-vs{
+    padding: 0;
+  }
+}

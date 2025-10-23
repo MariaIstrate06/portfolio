@@ -83,3 +83,9 @@
   font-size: 0.9em;
   color: #444;
 }
+
+@media (max-width: 768px) {
+  :host { 
+    padding: 2em;
+  }
+}

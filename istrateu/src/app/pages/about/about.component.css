@@ -37,6 +37,10 @@
 .category-header, .item-header {
     display: flex;
 }
+.item{
+  margin-bottom: 2em;
+}
+
 .expand-btn{
     font-size: 1em;
     padding-left: 0.5em;
@@ -126,4 +130,44 @@ h3{
 }
 .progress-item{
   margin: 0.5em 0;
+}
+
+@media (max-width: 768px) {
+  h1{
+      font-size: 1em;
+  }
+  h2{
+      font-size: 1em;
+  }
+  h3{
+      font-size: 0.8em;
+      color: #a1a1a1;
+      padding: 0;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+  }
+  :host{
+    padding: 0;
+  }
+  .expand-btn{
+      font-size: 0.4em;
+  }
+  .category{
+    padding: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .item-period{
+    font-size: 0.6em;
+    text-align: right;
+  }
+  .section-description{
+    font-size: 0.8em;
+  }
+  .category-body{
+    padding: 0;
+  }
+  .skill-container{
+    font-size: 0.8em;
+  }
 }

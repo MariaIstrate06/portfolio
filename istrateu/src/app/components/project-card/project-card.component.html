@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="carousel">
+    <button class="nav-btn left" (click)="prev()">&#10094;</button>
+    <div class="img-container">
+        <img
+            [src]="images[currentIndex]"
+            [alt]="title"
+            class="carousel-img"
+        />  
+    </div>
+    
+    <button class="nav-btn right" (click)="next()">&#10095;</button>
+  </div>
+
+  <div class="content">
+    <h2 class="title">{{ title }}</h2>
+    <p class="description">{{ description }}</p>
+
+    <div class="tags">
+      <!-- <span class="tag" *ngFor="let tag of tags">{{ tag }}</span> -->
+       <div class="tag">react</div>
+       <div class="tag">javascript</div>
+       
+
+    </div>
+    <div class="links">
+      <i class="bi bi-github"></i>
+      <i class="bi bi-globe"></i>
+    </div>
+  </div>
+</div>
