@@ -1,0 +1,1 @@
+import{Cb as a,Ua as o,qb as e,rb as c}from"./chunk-R4EBD3J3.js";var s=class n{static \u0275fac=function(t){return new(t||n)};static \u0275cmp=o({type:n,selectors:[["app-contact"]],decls:2,vars:0,consts:[[1,"coming-soon"]],template:function(t,m){t&1&&(e(0,"div",0),a(1," coming soon! "),c())},encapsulation:2})};export{s as ContactComponent};

@@ -1,0 +1,2 @@
+import './polyfills.server.mjs';
+import{Db as a,Ta as o,rb as e,sb as c}from"./chunk-4Q5Y4QXS.mjs";import"./chunk-X2SEQXRR.mjs";var s=class n{static \u0275fac=function(t){return new(t||n)};static \u0275cmp=o({type:n,selectors:[["app-contact"]],decls:2,vars:0,consts:[[1,"coming-soon"]],template:function(t,m){t&1&&(e(0,"div",0),a(1," coming soon! "),c())},encapsulation:2})};export{s as ContactComponent};

@@ -1,0 +1,12 @@
+{
+  "routes": {
+    "/portfolio/about": {},
+    "/portfolio/contact": {},
+    "/portfolio/digital-builds": {},
+    "/portfolio/home": {},
+    "/portfolio/moving-frames": {},
+    "/portfolio/original-tracks": {},
+    "/portfolio/portfolio": {},
+    "/portfolio/visual-stories": {}
+  }
+}
