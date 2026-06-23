@@ -1,3 +1,32 @@
-<div class="coming-soon">
-  coming soon!
+<section class="contact-page">
+  <h1>let's connect</h1>
+
+  <p class="intro">
+    Open to collaborations, creative projects, and tech opportunities.
+  </p>
+
+  <div class="contact-card">
+    <div class="row">
+      <span class="label">email</span>
+      <span class="value">{{ safeEmailDisplay }}</span>
+    </div>
+
+    <div class="actions">
+      <button type="button" class="btn btn-primary" (click)="contactByEmail()">
+        contact me
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="copyEmail()">
+        copy email
+      </button>
+    </div>
+
+    <div class="socials">
+      <a [href]="instagramUrl" target="_blank" rel="noopener noreferrer">
+        instagram
+      </a>
+      <a [href]="linkedinUrl" target="_blank" rel="noopener noreferrer">
+        linkedin
+      </a>
+    </div>
   </div>
+</section>

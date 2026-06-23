@@ -1,0 +1,104 @@
+.contact-page {
+	max-width: 760px;
+	margin: 0 auto;
+	padding: 2rem 1rem;
+	color: #f2f2f2;
+}
+
+.contact-page h1 {
+	margin: 0 0 0.75rem;
+	font-size: clamp(2rem, 4vw, 2.8rem);
+	text-transform: lowercase;
+}
+
+.intro {
+	margin: 0 0 1.5rem;
+	color: #d7d7d7;
+	line-height: 1.6;
+}
+
+.contact-card {
+	border: 1px solid #3a3a3a;
+	border-radius: 14px;
+	padding: 1.25rem;
+	background: linear-gradient(160deg, #171717, #101010);
+	box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.75rem;
+	margin-bottom: 1rem;
+}
+
+.label {
+	font-size: 0.85rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: #afafaf;
+}
+
+.value {
+	font-size: 1rem;
+	color: #f6f6f6;
+}
+
+.actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin: 0.5rem 0 1.25rem;
+}
+
+.btn {
+	border: 1px solid transparent;
+	border-radius: 999px;
+	padding: 0.65rem 1rem;
+	font-weight: 600;
+	text-transform: lowercase;
+	cursor: pointer;
+	transition: transform 180ms ease, opacity 180ms ease, border-color 180ms ease;
+}
+
+.btn:hover {
+	transform: translateY(-1px);
+}
+
+.btn-primary {
+	background: #f5f5f5;
+	color: #111;
+}
+
+.btn-secondary {
+	background: transparent;
+	border-color: #505050;
+	color: #ebebeb;
+}
+
+.socials {
+	display: flex;
+	gap: 1rem;
+}
+
+.socials a {
+	color: #f3f3f3;
+	text-decoration: none;
+	border-bottom: 1px solid #7a7a7a;
+	padding-bottom: 2px;
+}
+
+.socials a:hover {
+	opacity: 0.82;
+}
+
+@media (max-width: 640px) {
+	.contact-page {
+		padding: 1.5rem 0.85rem;
+	}
+
+	.contact-card {
+		padding: 1rem;
+	}
+}
