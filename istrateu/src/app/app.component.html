@@ -1,6 +1,6 @@
 <navbar></navbar>
-<main [@routeFade] class="main">
-    <router-outlet></router-outlet>
+<main class="main">
+    <div class="route-wrapper" [@routeFade]="prepareRoute(outlet)">
+        <router-outlet #outlet="outlet"></router-outlet>
+    </div>
 </main>
-
-

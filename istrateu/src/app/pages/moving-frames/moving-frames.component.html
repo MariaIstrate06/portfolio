@@ -1,3 +1,39 @@
-<div class="coming-soon">
-  coming soon
+<div class="moving-frames-page">
+  <div class="title-moving-frames">
+    <div class="heading">
+      <i class="bi bi-film reel-icon left"></i>
+      <h2 class="heading-text">moving frames</h2>
+      <i class="bi bi-film reel-icon right"></i>
+    </div>
+    <p class="subtitle">objects caught in motion</p>
+  </div>
+
+  <div class="frames-grid">
+    <div class="frame-card" *ngFor="let video of videos; let i = index" [style.animation-delay.ms]="i * 60">
+      <div class="frame-embed">
+        <div class="sprockets"></div>
+        <iframe
+          [src]="safeUrl(video.embedUrl)"
+          title="{{ video.title }}"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+      <div class="frame-info">
+        <div class="frame-heading-row">
+          <h3 class="frame-title">{{ video.title }}</h3>
+          <span class="platform-badge" [ngClass]="platform(video.embedUrl)">
+            <i class="bi" [ngClass]="{
+              'bi-youtube': platform(video.embedUrl) === 'youtube',
+              'bi-hdd-network': platform(video.embedUrl) === 'drive',
+              'bi-play-circle': platform(video.embedUrl) === 'video'
+            }"></i>
+            {{ platform(video.embedUrl) }}
+          </span>
+        </div>
+        <p class="frame-description">{{ video.description }}</p>
+      </div>
+    </div>
+  </div>
 </div>

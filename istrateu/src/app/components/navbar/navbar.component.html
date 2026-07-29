@@ -1,6 +1,23 @@
-<div class="navbar">
-    <button class="btn-navbar" routerLink="/home">hello, world</button>
-    <button class="btn-navbar" routerLink="/about">my cv</button>
-    <button class="btn-navbar" routerLink="/portfolio">portfolio</button>
-    <button class="btn-navbar" routerLink="/contact">contact</button>
-</div>
+<nav class="navbar">
+  <div class="nav-links" [class.open]="menuOpen">
+    <button class="close-btn" (click)="closeMenu()" aria-label="Close menu">
+      <i class="bi bi-x-lg"></i>
+    </button>
+
+    <button class="btn-navbar home-btn" routerLink="/home" (click)="onHomeClick()">
+      hello, world
+      <i
+        class="bi bi-bandaid band-aid"
+        [class.spin]="spinBandAid"
+        (animationend)="spinBandAid = false"
+      ></i>
+    </button>
+    <button class="btn-navbar" routerLink="/about" (click)="closeMenu()">my cv</button>
+    <button class="btn-navbar" routerLink="/portfolio" (click)="closeMenu()">portfolio</button>
+    <button class="btn-navbar" routerLink="/contact" (click)="closeMenu()">contact</button>
+  </div>
+
+  <button class="hamburger-btn" (click)="toggleMenu()" aria-label="Open menu">
+    <i class="bi bi-list"></i>
+  </button>
+</nav>

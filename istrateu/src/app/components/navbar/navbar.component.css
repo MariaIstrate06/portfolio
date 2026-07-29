@@ -1,15 +1,25 @@
 .navbar{
-    padding: 1rem; 
+    padding: 1rem;
     display: flex;
-    justify-content: space-around;
-    gap: 2em;
     align-items: center;
+    gap: 2em;
     color: white;
     font-family: 'Fira Code', 'Source Code Pro', monospace !important;
 }
 
+.nav-links {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2em;
+}
+
 .btn-navbar {
     position: relative; /* needed for pseudo-element */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
     color: white;
     font-family: 'Fira Code', 'Source Code Pro', monospace !important;
     background-color: transparent;
@@ -35,8 +45,62 @@
     transform: translateX(-50%) scaleX(1); /* grow to full width */
 }
 
+.band-aid {
+    font-size: 0.9em;
+    color: var(--light-green);
+}
+
+.band-aid.spin {
+    animation: bandaid-spin 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes bandaid-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(720deg); }
+}
+
+.hamburger-btn,
+.close-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .btn-navbar{
-    font-size: 0.5em;
+    font-size: 1.1em;
+  }
+
+  .hamburger-btn {
+    display: block;
+    font-size: 1.6em;
+    z-index: 1001;
+  }
+
+  .close-btn {
+    display: block;
+    position: absolute;
+    top: 1.2em;
+    right: 1.2em;
+    font-size: 1.6em;
+  }
+
+  .nav-links {
+    position: fixed;
+    inset: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    background: var(--bg);
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+    z-index: 1000;
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
   }
 }

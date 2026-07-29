@@ -1,0 +1,229 @@
+:host {
+  display: block;
+  width: 100%;
+  padding: 4em;
+}
+
+.moving-frames-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.title-moving-frames {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2.5em;
+  text-align: center;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 0.6em;
+  width: 100%;
+}
+
+.heading-text {
+  white-space: nowrap;
+  color: var(--creamy-white);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.reel-icon {
+  flex-shrink: 0;
+  color: var(--passion-red);
+  font-size: 0.9em;
+  opacity: 0;
+  transform: rotate(-20deg) scale(0.6);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.reel-icon.right {
+  transform: rotate(20deg) scale(0.6);
+}
+
+.heading:hover .heading-text {
+  color: var(--light-green);
+  transform: scale(1.05);
+}
+
+.heading:hover .reel-icon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.subtitle {
+  margin-top: 0.5em;
+  font-size: 0.9em;
+  color: #aaa;
+  font-style: italic;
+}
+
+.frames-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  width: 100%;
+}
+
+.frame-card {
+  display: flex;
+  flex-direction: column;
+  background: #1e1e1e;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid transparent;
+  box-shadow: -5px 5px 10px var(--shadow-purple);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  animation: frame-in 0.5s ease both;
+}
+
+@keyframes frame-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.frame-card:hover {
+  transform: translate(5px, -5px);
+  box-shadow: -8px 8px 18px var(--shadow-purple);
+  border-color: var(--light-green);
+}
+
+.frame-embed {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  background: #000;
+}
+
+.sprockets {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  z-index: 1;
+  background-color: var(--light-green);
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--bg) 0,
+    var(--bg) 6px,
+    transparent 6px,
+    transparent 16px
+  );
+  background-size: 16px 6px;
+  transition: filter 0.3s ease;
+}
+
+.frame-card:hover .sprockets {
+  animation: reel-scroll 1.2s linear infinite;
+}
+
+@keyframes reel-scroll {
+  from { background-position: 0 0; }
+  to { background-position: 16px 0; }
+}
+
+.frame-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.frame-info {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.frame-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
+}
+
+.frame-title {
+  font-size: 1.05em;
+  color: var(--creamy-white);
+  transition: color 0.25s ease;
+}
+
+.frame-card:hover .frame-title {
+  color: var(--light-green);
+}
+
+.platform-badge {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.65em;
+  text-transform: uppercase;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.platform-badge.youtube {
+  background: var(--passion-red);
+  color: var(--creamy-white);
+}
+
+.platform-badge.drive {
+  background: var(--jungle-green);
+  color: var(--bg);
+}
+
+.platform-badge.video {
+  background: var(--light-green);
+  color: var(--bg);
+}
+
+.frame-description {
+  font-size: 0.85em;
+  color: var(--creamy-white);
+  opacity: 0.75;
+}
+
+@media (max-width: 1100px) {
+  .frames-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  :host {
+    padding: 2em;
+  }
+
+  .heading-text {
+    font-size: 0.85em;
+  }
+
+  .frames-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .frame-card:hover {
+    transform: none;
+    box-shadow: -5px 5px 10px var(--shadow-purple);
+  }
+}

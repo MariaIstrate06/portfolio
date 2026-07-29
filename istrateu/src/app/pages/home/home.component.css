@@ -42,6 +42,12 @@ html, body {
   color: var(--light-green)
 }
 
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
 .btn {
   font-size: 1.3em;
   box-shadow: -5px 5px 10px #800080;
@@ -53,11 +59,12 @@ html, body {
   color: #0b0b0d;
   text-decoration: none !important;
   width: fit-content;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn:hover {
   transform: translate(5px, -5px);
+  box-shadow: -8px 8px 16px #800080;
 }
 a {
   color: inherit;
@@ -92,6 +99,10 @@ a {
   .description {
     max-width: 100%;
     text-align: center;
+  }
+
+  .cta-row {
+    justify-content: center;
   }
 
   .x-logo {

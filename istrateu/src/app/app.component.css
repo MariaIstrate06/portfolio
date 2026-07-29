@@ -5,6 +5,16 @@
   padding: 4em;
 }
 
+.main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.route-wrapper {
+  position: relative;
+  width: 100%;
+}
+
 .main-page {
   height: 100%;
   width: 100%;
