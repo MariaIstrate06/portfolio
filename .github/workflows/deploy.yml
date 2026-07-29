@@ -1,0 +1,44 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: istrateu/package-lock.json
+
+      - name: Install dependencies
+        working-directory: istrateu
+        run: npm ci
+
+      - name: Build (static, base href /portfolio/)
+        working-directory: istrateu
+        run: npx ng build --base-href=/portfolio/
+
+      - name: Add .nojekyll
+        run: touch istrateu/dist/istrateu/browser/.nojekyll
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: istrateu/dist/istrateu/browser
