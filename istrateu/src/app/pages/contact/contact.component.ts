@@ -14,6 +14,7 @@ export class ContactComponent {
 
     readonly instagramUrl = 'https://www.instagram.com/istrateu/';
     readonly linkedinUrl = 'https://www.linkedin.com/in/maria-istrate-0b384017b/';
+    readonly tiktokUrl = 'https://www.tiktok.com/@istrateu';
 
     get email(): string {
       return this.emailCharCodes.map((charCode) => String.fromCharCode(charCode)).join('');

@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(lsof -iTCP -sTCP:LISTEN -P)",
+      "Bash(kill 12089)",
+      "Bash(node verify-home.js)",
+      "Bash(vercel whoami *)",
+      "Bash(vercel project *)",
+      "Bash(git fetch *)",
+      "Bash(git ls-tree *)",
+      "Bash(gh workflow *)",
+      "Bash(gh run *)"
+    ]
+  }
+}

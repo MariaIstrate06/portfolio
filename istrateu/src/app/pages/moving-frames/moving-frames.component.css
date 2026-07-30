@@ -78,9 +78,9 @@
   background: #1e1e1e;
   border-radius: 1rem;
   overflow: hidden;
-  border: 1px solid transparent;
+  border: 1px solid var(--light-green);
   box-shadow: -5px 5px 10px var(--shadow-purple);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   animation: frame-in 0.5s ease both;
 }
 
@@ -98,7 +98,6 @@
 .frame-card:hover {
   transform: translate(5px, -5px);
   box-shadow: -8px 8px 18px var(--shadow-purple);
-  border-color: var(--light-green);
 }
 
 .frame-embed {
@@ -106,34 +105,6 @@
   width: 100%;
   padding-top: 56.25%; /* 16:9 */
   background: #000;
-}
-
-.sprockets {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 6px;
-  z-index: 1;
-  background-color: var(--light-green);
-  background-image: repeating-linear-gradient(
-    90deg,
-    var(--bg) 0,
-    var(--bg) 6px,
-    transparent 6px,
-    transparent 16px
-  );
-  background-size: 16px 6px;
-  transition: filter 0.3s ease;
-}
-
-.frame-card:hover .sprockets {
-  animation: reel-scroll 1.2s linear infinite;
-}
-
-@keyframes reel-scroll {
-  from { background-position: 0 0; }
-  to { background-position: 16px 0; }
 }
 
 .frame-embed iframe {

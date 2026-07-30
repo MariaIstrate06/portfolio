@@ -11,7 +11,6 @@
   <div class="frames-grid">
     <div class="frame-card" *ngFor="let video of videos; let i = index" [style.animation-delay.ms]="i * 60">
       <div class="frame-embed">
-        <div class="sprockets"></div>
         <iframe
           [src]="safeUrl(video.embedUrl)"
           title="{{ video.title }}"
