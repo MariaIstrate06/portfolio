@@ -3,6 +3,10 @@
     padding-right: 3em;
 }
 
+.placeholder {
+  color: var(--text-muted);
+}
+
 @media (max-width: 768px) {
   .main-vs{
     padding: 0;

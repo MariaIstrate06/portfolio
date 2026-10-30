@@ -4,7 +4,12 @@
       <i class="bi bi-x-lg"></i>
     </button>
 
-    <button class="btn-navbar home-btn" routerLink="/home" (click)="onHomeClick()">
+    <button
+      class="btn-navbar home-btn"
+      routerLink="/home"
+      routerLinkActive="active"
+      (click)="onHomeClick()"
+    >
       hello, world
       <i
         class="bi bi-bandaid band-aid"
@@ -12,9 +17,11 @@
         (animationend)="spinBandAid = false"
       ></i>
     </button>
-    <button class="btn-navbar" routerLink="/about" (click)="closeMenu()">my cv</button>
-    <button class="btn-navbar" routerLink="/portfolio" (click)="closeMenu()">portfolio</button>
-    <button class="btn-navbar" routerLink="/contact" (click)="closeMenu()">contact</button>
+    <button class="btn-navbar" routerLink="/about" routerLinkActive="active" (click)="closeMenu()">about me</button>
+    <button class="btn-navbar" routerLink="/cv" routerLinkActive="active" (click)="closeMenu()">my cv</button>
+    <button class="btn-navbar" routerLink="/work" routerLinkActive="active" (click)="closeMenu()">my work</button>
+    <button class="btn-navbar" routerLink="/receipts" routerLinkActive="active" (click)="closeMenu()">the receipts</button>
+    <button class="btn-navbar" routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">contact</button>
   </div>
 
   <button class="hamburger-btn" (click)="toggleMenu()" aria-label="Open menu">

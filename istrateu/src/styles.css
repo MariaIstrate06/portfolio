@@ -3,13 +3,24 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  --bg: #171717;
-  --jungle-green: #80a552;
-  --passion-red: #ca1515;
-  --shadow-purple: #800080;
-  --light-green: #7ed957;
-  --creamy-white: #f8f4ec
 }
+
+:root {
+  --bg: #171717;
+  --surface: #1d1b19;
+  --surface-2: #262320;
+  --line: #2e2c29;
+  --line-2: #33302c;
+  --line-3: #3a3631;
+  --text: #f8f4ec;
+  --text-muted: #a8a196;
+  --text-muted-2: #c9c2b6;
+  --green: #7ed957;
+  --purple: #800080;
+  --red: #ca1515;
+  --mint: #8ecdb4;
+}
+
 .main{
   height: 100%;
 }
@@ -26,13 +37,13 @@ body, html {
     background-color: var(--bg);
     width: 100%;
     height: 100%;
-    font-family: 'Fira Code', 'Source Code Pro', monospace !important;
-    color: var(--creamy-white);
+    font-family: 'Fira Code', 'Source Code Pro', ui-monospace, monospace !important;
+    color: var(--text);
 }
 
 button:focus-visible,
 a:focus-visible {
-  outline: 2px solid var(--light-green);
+  outline: 2px solid var(--green);
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -47,7 +58,7 @@ app-root {
 }
 
 button{
-  font-family: 'Fira Code', 'Source Code Pro', monospace;
+  font-family: 'Fira Code', 'Source Code Pro', ui-monospace, monospace;
 }
 a{
   text-decoration: none; /* remove underline */
@@ -57,7 +68,7 @@ html, body { height: 100%; }
 
 .coming-soon{
   display: flex;
-  color: var(--light-green);
+  color: var(--green);
   height: 70%;
   font-weight: 900;
   font-size: 4em;
@@ -65,8 +76,39 @@ html, body { height: 100%; }
   align-items: center;
 }
 
+/* Primary CTA pill button — used across the whole site (brief §3) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  font-size: 1.3em;
+  box-shadow: -5px 5px 10px var(--purple);
+  padding: 0.8em;
+  outline: none;
+  user-select: none;
+  border: none;
+  border-radius: 1em;
+  background-color: var(--green);
+  color: var(--bg);
+  text-decoration: none !important;
+  width: fit-content;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: translate(5px, -5px);
+  box-shadow: -8px 8px 16px var(--purple);
+}
+
 @media (max-width: 768px) {
   .coming-soon{
     font-size: 2em;
+  }
+
+  .btn {
+    font-size: 1.1em;
+    padding: 0.6em;
   }
 }

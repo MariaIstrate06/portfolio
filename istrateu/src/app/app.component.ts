@@ -1,12 +1,11 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { HireMeComponent } from "./components/hire-me/hire-me.component";
 import { trigger, transition, style, animate, query, group } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, HireMeComponent],
+  imports: [RouterOutlet, NavbarComponent],
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

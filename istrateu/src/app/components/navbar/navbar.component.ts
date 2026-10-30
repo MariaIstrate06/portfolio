@@ -1,12 +1,12 @@
 import { Component, HostListener } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'navbar',
   standalone: true,   // <-- THIS makes it standalone
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
-  imports: [RouterLink]
+  imports: [RouterLink, RouterLinkActive]
 })
 export class NavbarComponent {
   menuOpen = false;

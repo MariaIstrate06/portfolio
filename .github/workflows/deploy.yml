@@ -37,6 +37,9 @@ jobs:
       - name: Use CSR fallback as root index.html
         run: mv istrateu/dist/istrateu/browser/index.csr.html istrateu/dist/istrateu/browser/index.html
 
+      - name: Add 404.html fallback for GitHub Pages deep links
+        run: cp istrateu/dist/istrateu/browser/index.html istrateu/dist/istrateu/browser/404.html
+
       - name: Add .nojekyll
         run: touch istrateu/dist/istrateu/browser/.nojekyll
 
