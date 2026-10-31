@@ -1,0 +1,32 @@
+{
+  "stats": [
+    { "number": "[X]", "label": "events organized" },
+    { "number": "[X]", "label": "people in the crowd" },
+    { "number": "3,000", "label": "rubber ducks sold in one week" },
+    { "number": "100%", "label": "of TEDxIași events sold out" }
+  ],
+  "big": [
+    {
+      "name": "cursa de rățuște iași",
+      "years": "2025 · 2026",
+      "role": "campaign lead · rotaract iași",
+      "line": "[placeholder]",
+      "image": null,
+      "caseStudy": "cursa-de-ratuste"
+    },
+    {
+      "name": "tedxiași",
+      "years": "2024 · live 2025",
+      "role": "pr lead · core organizing team",
+      "line": "[placeholder]",
+      "image": null,
+      "caseStudy": "tedxiasi"
+    }
+  ],
+  "small": [
+    { "year": "[year]", "name": "drive-in cinema iași", "role": "[role]", "line": "[placeholder]" },
+    { "year": "[year]", "name": "condu prudent! alege viața!", "role": "[role]", "line": "[placeholder]" },
+    { "year": "[year]", "name": "[conference name]", "role": "[role]", "line": "[placeholder]" },
+    { "year": "[year]", "name": "[event name]", "role": "[role]", "line": "[placeholder]" }
+  ]
+}

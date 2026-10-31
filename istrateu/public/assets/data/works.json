@@ -1,0 +1,470 @@
+[
+  {
+    "id": "vs-digital-bucurat-logo",
+    "branch": "digital",
+    "title": "Bucurat Logo",
+    "meta": "",
+    "file": "assets/digital/vs-digital-bucurat-logo.png",
+    "featured": false,
+    "order": 10
+  },
+  {
+    "id": "vs-digital-cash-icon-logo",
+    "branch": "digital",
+    "title": "Cash Icon Logo",
+    "meta": "",
+    "file": "assets/digital/vs-digital-cash-icon-logo.png",
+    "featured": false,
+    "order": 20
+  },
+  {
+    "id": "vs-digital-cdr-brandbook",
+    "branch": "digital",
+    "title": "Cdr Brandbook",
+    "meta": "",
+    "file": "assets/digital/vs-digital-cdr-brandbook.png",
+    "featured": false,
+    "order": 30
+  },
+  {
+    "id": "vs-digital-dia-titiserv-brandbook",
+    "branch": "digital",
+    "title": "Dia Titiserv Brandbook",
+    "meta": "",
+    "file": "assets/digital/vs-digital-dia-titiserv-brandbook.png",
+    "featured": false,
+    "order": 40
+  },
+  {
+    "id": "vs-digital-digital-smile-logo",
+    "branch": "digital",
+    "title": "Digital Smile Logo",
+    "meta": "",
+    "file": "assets/digital/vs-digital-digital-smile-logo.png",
+    "featured": false,
+    "order": 50
+  },
+  {
+    "id": "vs-digital-hertz-room-logo",
+    "branch": "digital",
+    "title": "Hertz Room Logo",
+    "meta": "",
+    "file": "assets/digital/vs-digital-hertz-room-logo.png",
+    "featured": false,
+    "order": 60
+  },
+  {
+    "id": "vs-digital-instal-turica-brandbook",
+    "branch": "digital",
+    "title": "Instal Turica Brandbook",
+    "meta": "",
+    "file": "assets/digital/vs-digital-instal-turica-brandbook.png",
+    "featured": false,
+    "order": 70
+  },
+  {
+    "id": "vs-digital-just-kids-brandbook",
+    "branch": "digital",
+    "title": "Just Kids Brandbook",
+    "meta": "",
+    "file": "assets/digital/vs-digital-just-kids-brandbook.png",
+    "featured": false,
+    "order": 80
+  },
+  {
+    "id": "vs-digital-lets-clean-logo",
+    "branch": "digital",
+    "title": "Lets Clean Logo",
+    "meta": "",
+    "file": "assets/digital/vs-digital-lets-clean-logo.png",
+    "featured": false,
+    "order": 90
+  },
+  {
+    "id": "vs-digital-retrebled-blind-game",
+    "branch": "digital",
+    "title": "Retrebled Blind Game",
+    "meta": "",
+    "file": "assets/digital/vs-digital-retrebled-blind-game.png",
+    "featured": false,
+    "order": 100
+  },
+  {
+    "id": "vs-digital-sens-brandbook",
+    "branch": "digital",
+    "title": "Sens Brandbook",
+    "meta": "",
+    "file": "assets/digital/vs-digital-sens-brandbook.png",
+    "featured": false,
+    "order": 110
+  },
+  {
+    "id": "vs-digital-skillmindful-wireframes",
+    "branch": "digital",
+    "title": "Skillmindful Wireframes",
+    "meta": "",
+    "file": "assets/digital/vs-digital-skillmindful-wireframes.png",
+    "featured": false,
+    "order": 120
+  },
+  {
+    "id": "vs-digital-studinsight-wireframes",
+    "branch": "digital",
+    "title": "Studinsight Wireframes",
+    "meta": "",
+    "file": "assets/digital/vs-digital-studinsight-wireframes.png",
+    "featured": false,
+    "order": 130
+  },
+  {
+    "id": "vs-digital-unic-logo",
+    "branch": "digital",
+    "title": "Unic Logo",
+    "meta": "",
+    "file": "assets/digital/vs-digital-unic-logo.png",
+    "featured": false,
+    "order": 140
+  },
+  {
+    "id": "vs-digital-year-plan-22-album-cover",
+    "branch": "digital",
+    "title": "Year Plan 22 Album Cover",
+    "meta": "",
+    "file": "assets/digital/vs-digital-year-plan-22-album-cover.png",
+    "featured": false,
+    "order": 150
+  },
+  {
+    "id": "vs-print-active-citizens-totebags",
+    "branch": "print",
+    "title": "Active Citizens Totebags",
+    "meta": "",
+    "file": "assets/print/vs-print-active-citizens-totebags.png",
+    "featured": false,
+    "order": 160
+  },
+  {
+    "id": "vs-print-bucurat-cani",
+    "branch": "print",
+    "title": "Bucurat Cani",
+    "meta": "",
+    "file": "assets/print/vs-print-bucurat-cani.png",
+    "featured": false,
+    "order": 170
+  },
+  {
+    "id": "vs-print-bucurat-roll-up",
+    "branch": "print",
+    "title": "Bucurat Roll Up",
+    "meta": "",
+    "file": "assets/print/vs-print-bucurat-roll-up.png",
+    "featured": false,
+    "order": 180
+  },
+  {
+    "id": "vs-print-business-card-mitel",
+    "branch": "print",
+    "title": "Business Card Mitel",
+    "meta": "",
+    "file": "assets/print/vs-print-business-card-mitel.png",
+    "featured": false,
+    "order": 190
+  },
+  {
+    "id": "vs-print-cdr-banner-stradal",
+    "branch": "print",
+    "title": "Cdr Banner Stradal",
+    "meta": "",
+    "file": "assets/print/vs-print-cdr-banner-stradal.png",
+    "featured": false,
+    "order": 200
+  },
+  {
+    "id": "vs-print-cdr-billboard",
+    "branch": "print",
+    "title": "Cdr Billboard",
+    "meta": "",
+    "file": "assets/print/vs-print-cdr-billboard.png",
+    "featured": false,
+    "order": 210
+  },
+  {
+    "id": "vs-print-cdr-brochure",
+    "branch": "print",
+    "title": "Cdr Brochure",
+    "meta": "",
+    "file": "assets/print/vs-print-cdr-brochure.png",
+    "featured": false,
+    "order": 220
+  },
+  {
+    "id": "vs-print-cdr-packaging",
+    "branch": "print",
+    "title": "Cdr Packaging",
+    "meta": "",
+    "file": "assets/print/vs-print-cdr-packaging.png",
+    "featured": false,
+    "order": 230
+  },
+  {
+    "id": "vs-print-cdr-statie-autobuz",
+    "branch": "print",
+    "title": "Cdr Statie Autobuz",
+    "meta": "",
+    "file": "assets/print/vs-print-cdr-statie-autobuz.png",
+    "featured": false,
+    "order": 240
+  },
+  {
+    "id": "vs-print-digital-smile-cards",
+    "branch": "print",
+    "title": "Digital Smile Cards",
+    "meta": "",
+    "file": "assets/print/vs-print-digital-smile-cards.png",
+    "featured": false,
+    "order": 250
+  },
+  {
+    "id": "vs-print-digital-smile-flyer",
+    "branch": "print",
+    "title": "Digital Smile Flyer",
+    "meta": "",
+    "file": "assets/print/vs-print-digital-smile-flyer.png",
+    "featured": false,
+    "order": 260
+  },
+  {
+    "id": "vs-print-gala-asii",
+    "branch": "print",
+    "title": "Gala Asii",
+    "meta": "",
+    "file": "assets/print/vs-print-gala-asii.png",
+    "featured": false,
+    "order": 270
+  },
+  {
+    "id": "vs-print-gloria-breloc",
+    "branch": "print",
+    "title": "Gloria Breloc",
+    "meta": "",
+    "file": "assets/print/vs-print-gloria-breloc.png",
+    "featured": false,
+    "order": 280
+  },
+  {
+    "id": "vs-print-gossip-duck",
+    "branch": "print",
+    "title": "Gossip Duck",
+    "meta": "",
+    "file": "assets/print/vs-print-gossip-duck.png",
+    "featured": false,
+    "order": 290
+  },
+  {
+    "id": "vs-print-karaoke-contest-brochure",
+    "branch": "print",
+    "title": "Karaoke Contest Brochure",
+    "meta": "",
+    "file": "assets/print/vs-print-karaoke-contest-brochure.png",
+    "featured": false,
+    "order": 300
+  },
+  {
+    "id": "vs-print-retrebled-ticket",
+    "branch": "print",
+    "title": "Retrebled Ticket",
+    "meta": "",
+    "file": "assets/print/vs-print-retrebled-ticket.png",
+    "featured": false,
+    "order": 310
+  },
+  {
+    "id": "vs-print-retrebled-totebags",
+    "branch": "print",
+    "title": "Retrebled Totebags",
+    "meta": "",
+    "file": "assets/print/vs-print-retrebled-totebags.png",
+    "featured": false,
+    "order": 320
+  },
+  {
+    "id": "vs-print-retrebled-tricouri",
+    "branch": "print",
+    "title": "Retrebled Tricouri",
+    "meta": "",
+    "file": "assets/print/vs-print-retrebled-tricouri.png",
+    "featured": false,
+    "order": 330
+  },
+  {
+    "id": "vs-print-studinsight",
+    "branch": "print",
+    "title": "Studinsight",
+    "meta": "",
+    "file": "assets/print/vs-print-studinsight.png",
+    "featured": false,
+    "order": 340
+  },
+  {
+    "id": "vs-print-volunteer-badge",
+    "branch": "print",
+    "title": "Volunteer Badge",
+    "meta": "",
+    "file": "assets/print/vs-print-volunteer-badge.png",
+    "featured": false,
+    "order": 350
+  },
+  {
+    "id": "vs-social-account-cdr",
+    "branch": "social",
+    "title": "Account Cdr",
+    "meta": "",
+    "file": "assets/social/vs-social-account-cdr.png",
+    "featured": false,
+    "order": 360
+  },
+  {
+    "id": "vs-social-account-retrebled",
+    "branch": "social",
+    "title": "Account Retrebled",
+    "meta": "",
+    "file": "assets/social/vs-social-account-retrebled.png",
+    "featured": false,
+    "order": 370
+  },
+  {
+    "id": "vs-social-account-rotaract",
+    "branch": "social",
+    "title": "Account Rotaract",
+    "meta": "",
+    "file": "assets/social/vs-social-account-rotaract.png",
+    "featured": false,
+    "order": 380
+  },
+  {
+    "id": "vs-social-account-tedx",
+    "branch": "social",
+    "title": "Account Tedx",
+    "meta": "",
+    "file": "assets/social/vs-social-account-tedx.png",
+    "featured": false,
+    "order": 390
+  },
+  {
+    "id": "vs-social-bucurat-campaign",
+    "branch": "social",
+    "title": "Bucurat Campaign",
+    "meta": "",
+    "file": "assets/social/vs-social-bucurat-campaign.png",
+    "featured": false,
+    "order": 400
+  },
+  {
+    "id": "vs-social-cdr-posts",
+    "branch": "social",
+    "title": "Cdr Posts",
+    "meta": "",
+    "file": "assets/social/vs-social-cdr-posts.png",
+    "featured": false,
+    "order": 410
+  },
+  {
+    "id": "vs-social-hertz-room",
+    "branch": "social",
+    "title": "Hertz Room",
+    "meta": "",
+    "file": "assets/social/vs-social-hertz-room.png",
+    "featured": false,
+    "order": 420
+  },
+  {
+    "id": "vs-social-retrebled",
+    "branch": "social",
+    "title": "Retrebled",
+    "meta": "",
+    "file": "assets/social/vs-social-retrebled.png",
+    "featured": false,
+    "order": 430
+  },
+  {
+    "id": "vs-social-rotaract-xmas",
+    "branch": "social",
+    "title": "Rotaract Xmas",
+    "meta": "",
+    "file": "assets/social/vs-social-rotaract-xmas.png",
+    "featured": false,
+    "order": 440
+  },
+  {
+    "id": "vs-social-sens-carousel",
+    "branch": "social",
+    "title": "Sens Carousel",
+    "meta": "",
+    "file": "assets/social/vs-social-sens-carousel.png",
+    "featured": false,
+    "order": 450
+  },
+  {
+    "id": "vs-social-tedx-live",
+    "branch": "social",
+    "title": "Tedx Live",
+    "meta": "",
+    "file": "assets/social/vs-social-tedx-live.png",
+    "featured": false,
+    "order": 460
+  },
+  {
+    "id": "vs-lead-training-cursa-de-ratuste-pr-2025",
+    "branch": "leadership",
+    "title": "Training Cursa De Ratuste Pr 2025",
+    "meta": "",
+    "file": "assets/leadership/vs-lead-training-cursa-de-ratuste-pr-2025.png",
+    "featured": false,
+    "order": 470
+  },
+  {
+    "id": "vs-lead-training-design-still-a-thing-2022",
+    "branch": "leadership",
+    "title": "Training Design Still A Thing 2022",
+    "meta": "",
+    "file": "assets/leadership/vs-lead-training-design-still-a-thing-2022.png",
+    "featured": false,
+    "order": 480
+  },
+  {
+    "id": "vs-lead-training-pr-media-intro-2020",
+    "branch": "leadership",
+    "title": "Training Pr Media Intro 2020",
+    "meta": "",
+    "file": "assets/leadership/vs-lead-training-pr-media-intro-2020.png",
+    "featured": false,
+    "order": 490
+  },
+  {
+    "id": "vs-lead-training-prkit-survival-guide",
+    "branch": "leadership",
+    "title": "Training Prkit Survival Guide",
+    "meta": "",
+    "file": "assets/leadership/vs-lead-training-prkit-survival-guide.png",
+    "featured": false,
+    "order": 500
+  },
+  {
+    "id": "vs-lead-training-web-basics-doctype",
+    "branch": "leadership",
+    "title": "Training Web Basics Doctype",
+    "meta": "",
+    "file": "assets/leadership/vs-lead-training-web-basics-doctype.png",
+    "featured": false,
+    "order": 510
+  },
+  {
+    "id": "vs-lead-training-why-pr-needs-media",
+    "branch": "leadership",
+    "title": "Training Why Pr Needs Media",
+    "meta": "",
+    "file": "assets/leadership/vs-lead-training-why-pr-needs-media.png",
+    "featured": false,
+    "order": 520
+  }
+]

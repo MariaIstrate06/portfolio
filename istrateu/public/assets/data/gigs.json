@@ -1,0 +1,12 @@
+{
+  "gigs": [
+    { "date": "[date]", "event": "[event] · [venue]", "role": "FOH engineer", "note": "[placeholder]" },
+    { "date": "[date]", "event": "[event] · [venue]", "role": "monitors", "note": "[placeholder]" },
+    { "date": "[date]", "event": "[event] · [venue]", "role": "live sound + recording", "note": "[placeholder]" },
+    { "date": "[date]", "event": "[event] · [venue]", "role": "FOH engineer", "note": "[placeholder]" }
+  ],
+  "quote": {
+    "line": "[a line from an organizer or artist about how the show sounded]",
+    "attribution": "[name, role]"
+  }
+}

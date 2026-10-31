@@ -1,0 +1,112 @@
+[
+  {
+    "slug": "cursa-de-ratuste",
+    "project": "cursa de rățuște · rotaract iași",
+    "hook": "3,000 rubber ducks in 7 days.",
+    "line": "[placeholder]",
+    "tags": ["campaign", "social", "web"],
+    "cover": "assets/case-studies/cs-cdr-gossip-duck-packs.png",
+    "meta": {
+      "role": "campaign lead",
+      "for": "rotaract club iași",
+      "when": "2025 – 2026, two editions",
+      "channels": "social, reddit, OOH, web"
+    },
+    "sections": {
+      "context": "cursa de rățuște is a charity rubber duck race in iași. people adopt a numbered rubber duck, the ducks race [where / how], and every duck sold funds a children's neuropsychiatry ward.",
+      "problem": "a few weeks before race day, sales stalled. the people who buy for a good cause had already bought, and [X] ducks were still waiting for a home. another 'please support us' post wasn't going to fix that.",
+      "idea": "stop asking for donations. give people a reason to buy today, and talk to every audience in its own language.",
+      "whatWeDid": [
+        { "title": "a week of rapid-fire deals", "text": "daily giveaways and sponsor 1+1 offers with deadlines." },
+        { "title": "ducks with a voice", "text": "gen z / millennial message variants, propaganda-style humor, guerrilla marketing." },
+        { "title": "rubber duck debugging, for charity", "text": "a reddit r/programare post targeting programmers; corporate IT workers became the biggest buyers." },
+        { "title": "a website that listens", "text": "built the event site to track where sales came from, and reallocated budget/messaging to what converted." }
+      ],
+      "results": [
+        { "number": "3,000", "label": "ducks sold in 7 days" },
+        { "number": "10+", "label": "campaigns across two editions" },
+        { "number": "[X]", "label": "raised for the ward" },
+        { "number": "[X]", "label": "people on race day" }
+      ],
+      "myPart": "campaign concepts, copy, design and the website. team: [names / roles from rotaract iași]."
+    },
+    "images": [
+      { "file": null, "caption": "[giveaway post]" },
+      { "file": null, "caption": "[reddit post screenshot]" },
+      { "file": null, "caption": "[billboard / banner]" }
+    ],
+    "featuredOnHome": true
+  },
+  {
+    "slug": "tedxiasi",
+    "project": "tedxiași · 2024 & live 2025",
+    "hook": "every event, sold out.",
+    "line": "[placeholder]",
+    "tags": ["campaign", "design", "pr"],
+    "cover": null,
+    "meta": {
+      "role": "[placeholder]",
+      "for": "[placeholder]",
+      "when": "[placeholder]",
+      "channels": "[placeholder]"
+    },
+    "sections": {
+      "context": "[placeholder]",
+      "problem": "[placeholder]",
+      "idea": "[placeholder]",
+      "whatWeDid": [],
+      "results": [],
+      "myPart": "[placeholder]"
+    },
+    "images": [],
+    "featuredOnHome": true
+  },
+  {
+    "slug": "dr-max-v8interactive",
+    "project": "dr. max @ v8interactive",
+    "hook": "one pharmacy, three audiences with nothing in common.",
+    "line": "[placeholder]",
+    "tags": ["art direction", "OOH", "social"],
+    "cover": null,
+    "meta": {
+      "role": "[placeholder]",
+      "for": "[placeholder]",
+      "when": "[placeholder]",
+      "channels": "[placeholder]"
+    },
+    "sections": {
+      "context": "[placeholder]",
+      "problem": "[placeholder]",
+      "idea": "[placeholder]",
+      "whatWeDid": [],
+      "results": [],
+      "myPart": "[placeholder]"
+    },
+    "images": [],
+    "featuredOnHome": true
+  },
+  {
+    "slug": "fix-media-stickers",
+    "project": "[band] · fix media records",
+    "hook": "+3000% streams from a pack of stickers.",
+    "line": "[placeholder]",
+    "tags": ["guerrilla", "music", "print"],
+    "cover": "assets/case-studies/cs-stickers-europe.png",
+    "meta": {
+      "role": "[placeholder]",
+      "for": "[placeholder]",
+      "when": "[placeholder]",
+      "channels": "[placeholder]"
+    },
+    "sections": {
+      "context": "[placeholder]",
+      "problem": "[placeholder]",
+      "idea": "[placeholder]",
+      "whatWeDid": [],
+      "results": [],
+      "myPart": "[placeholder]"
+    },
+    "images": [],
+    "featuredOnHome": false
+  }
+]

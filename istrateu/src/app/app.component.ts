@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { filter, map, switchMap } from 'rxjs';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { SeoService } from './services/seo.service';
 import { trigger, transition, style, animate, query, group } from '@angular/animations';
 
 @Component({
@@ -31,8 +33,30 @@ import { trigger, transition, style, animate, query, group } from '@angular/anim
     ])
   ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title= 'istrateu';
+
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+    private seo: SeoService
+  ) {}
+
+  ngOnInit(): void {
+    this.router.events
+      .pipe(
+        filter((event): event is NavigationEnd => event instanceof NavigationEnd),
+        map(() => {
+          let route = this.activatedRoute;
+          while (route.firstChild) {
+            route = route.firstChild;
+          }
+          return route;
+        }),
+        switchMap(route => route.data)
+      )
+      .subscribe(data => this.seo.update(data));
+  }
 
   prepareRoute(outlet: RouterOutlet): string {
     return outlet?.isActivated ? outlet.activatedRoute.snapshot.url.join('/') || 'home' : '';

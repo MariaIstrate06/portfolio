@@ -1,0 +1,54 @@
+[
+  {
+    "title": "[track name]",
+    "artist": "maria istrate",
+    "kind": "mine",
+    "tags": ["my own", "produced", "mixed"],
+    "files": {
+      "raw": "assets/audio/placeholder-1-raw.mp3",
+      "production": "assets/audio/placeholder-1-production.mp3",
+      "mix": "assets/audio/placeholder-1-mix.mp3"
+    }
+  },
+  {
+    "title": "[track name]",
+    "artist": "[artist]",
+    "kind": "others",
+    "tags": ["produced", "mixed"],
+    "files": {
+      "raw": "assets/audio/placeholder-2-raw.mp3",
+      "production": "assets/audio/placeholder-2-production.mp3",
+      "mix": "assets/audio/placeholder-2-mix.mp3"
+    }
+  },
+  {
+    "title": "[track name]",
+    "artist": "[artist]",
+    "kind": "others",
+    "tags": ["mixed"],
+    "files": {
+      "mix": "assets/audio/placeholder-3-mix.mp3"
+    }
+  },
+  {
+    "title": "[track name]",
+    "artist": "[artist]",
+    "kind": "others",
+    "tags": ["recorded", "mixed"],
+    "files": {
+      "raw": "assets/audio/placeholder-4-raw.mp3",
+      "mix": "assets/audio/placeholder-4-mix.mp3"
+    }
+  },
+  {
+    "title": "[track name]",
+    "artist": "maria istrate",
+    "kind": "mine",
+    "tags": ["my own", "produced"],
+    "files": {
+      "raw": "assets/audio/placeholder-5-raw.mp3",
+      "production": "assets/audio/placeholder-5-production.mp3"
+    },
+    "spotify": "[spotify track url]"
+  }
+]

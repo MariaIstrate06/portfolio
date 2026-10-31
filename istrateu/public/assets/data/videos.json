@@ -1,0 +1,72 @@
+[
+  {
+    "title": "TEDxIasi 2024",
+    "role": "shot, directed, color graded and edited",
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=Zazij9LNtAY",
+    "orientation": "wide"
+  },
+  {
+    "title": "Short Video Documentary",
+    "role": "shot, directed, color graded and edited",
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=VhS5P_HbBeQ",
+    "orientation": "wide"
+  },
+  {
+    "title": "Motion Lyrics Video",
+    "role": "edited",
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=r01T7p3PCsw",
+    "orientation": "wide"
+  },
+  {
+    "title": "Promotional Video - Escape Land",
+    "role": "edited",
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=ZF_SRc_7lhk",
+    "orientation": "wide"
+  },
+  {
+    "title": "Promotional Video - Drive in",
+    "role": "shot, edited",
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=65DFe5O06rA",
+    "orientation": "wide"
+  },
+  {
+    "title": "Aftermovie - CDR25",
+    "role": "shot, edited",
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=5jIWTyK3np8",
+    "orientation": "wide"
+  },
+  {
+    "title": "Safety driving campaigns",
+    "role": "scripted, shot, directed, color graded & edited",
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=REESHi9TmmA",
+    "orientation": "wide"
+  },
+  {
+    "title": "[reel title]",
+    "role": "[role]",
+    "platform": "tiktok",
+    "url": "[tiktok video url]",
+    "orientation": "vertical"
+  },
+  {
+    "title": "[reel title]",
+    "role": "[role]",
+    "platform": "instagram",
+    "url": "[instagram reel url]",
+    "orientation": "vertical"
+  },
+  {
+    "title": "[reel title]",
+    "role": "[role]",
+    "platform": "youtube-shorts",
+    "url": "[youtube shorts url]",
+    "orientation": "vertical"
+  }
+]
