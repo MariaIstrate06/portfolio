@@ -60,24 +60,4 @@ export class CvComponent implements OnInit {
   toggleCategory(cat: Category) {
     cat.open = !cat.open;
   }
-
-  toggleItem(item: SectionItem) {
-    item.open = !item.open;
-  }
-
-  log(value: any) {
-    console.log('LOG FUNC: ', value);
-    return value;
-  }
-
-  isSkillOrLanguage(title: string): boolean {
-    const check = title.toLowerCase() === 'skills' || title.toLowerCase() === 'languages';
-    console.log(check);
-    return check;
-  }
-
-  // helper for *ngFor trackBy
-  trackByTitle(index: number, item: any) {
-    return item?.title ?? index;
-  }
 }

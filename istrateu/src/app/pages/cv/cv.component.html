@@ -1,12 +1,25 @@
 <div class="main-page">
-  <h1><b>curriculum vitae</b></h1>
+  <div class="cv-header">
+    <h1>curriculum vitae</h1>
+    <a class="btn download-btn" href="assets/cv/maria-istrate-cv.pdf" download>
+      download pdf
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 3v12"></path>
+        <path d="M7 10l5 5 5-5"></path>
+        <path d="M5 21h14"></path>
+      </svg>
+    </a>
+  </div>
+
+  <p class="disclaimer">[texts get updated later; the structure stays as it is today]</p>
+
   <div class="cv-accordion">
     @for (category of categories; track category) {
       <div class="category">
-        <div class="category-header" (click)="toggleCategory(category)">
+        <button class="category-header" (click)="toggleCategory(category)">
           <h2>{{ category.title?.toLowerCase() }}</h2>
-          <div class="expand-btn">{{ category.open ? '▲' : '▼' }}</div>
-        </div>
+          <span class="expand-btn">{{ category.open ? '▲' : '▼' }}</span>
+        </button>
         @if (category.open) {
           <div class="category-body">
             <!-- SKILLS -->
@@ -17,7 +30,6 @@
                     <h3>{{ skillCat.title?.toLowerCase() }}</h3>
                     @for (item of skillCat.items; track item) {
                       <div class="progress-item">
-                        <!-- de facut fontul de la desc mai. mic -->
                         <div class="skill-container">
                           <strong class="skill-title">{{ item.title?.toLowerCase() }}</strong><i>{{item.description?.toLowerCase()}}</i>
                         </div>
@@ -33,7 +45,10 @@
                 @for (item of category.section; track item) {
                   <div class="progress-item">
                     <div class="progress-title">{{ item.title?.toLowerCase() }}</div>
-                    <div class="progress-percent" [style.width]="item.percentage"><strong>{{ item.level }}</strong></div>
+                    <div class="progress-bar">
+                      <div class="progress-fill" [style.width]="item.percentage"></div>
+                    </div>
+                    <div class="progress-level">{{ item.level }}</div>
                   </div>
                 }
               </div>

@@ -8,5 +8,85 @@
     </div>
   </div>
   <div class="right">
-    <img src="x_red.png" alt="x" class="x-logo">
+    <img src="x_red.png" alt="x" class="x-logo" width="560" height="560" fetchpriority="high">
+  </div>
 </div>
+
+@if (site$ | async; as site) {
+  <section class="about-section" id="about">
+    <div class="about-photo-box">
+      <img
+        src="assets/about/about-me.png"
+        alt="maria istrate"
+        class="about-photo"
+        width="260"
+        height="260"
+        loading="lazy"
+      >
+    </div>
+    <div class="about-text">
+      <p>{{ site.home.aboutBlurb }}</p>
+      <a routerLink="/about" class="more-link">more about me →</a>
+    </div>
+  </section>
+}
+
+@if (featuredWorks$ | async; as works) {
+  @if (works.length) {
+    <section class="visuals-section">
+      <h2>selected visuals</h2>
+      <div class="visuals-grid">
+        @for (w of works; track w.id) {
+          <a
+            class="visual-card"
+            [routerLink]="['/work/visual-stories']"
+            [fragment]="branchInfo[w.branch].anchor"
+            [style.background]="branchInfo[w.branch].bg"
+            [style.color]="branchInfo[w.branch].ink"
+          >
+            <span class="branch-label">{{ w.branch }}</span>
+            <picture>
+              <source [srcset]="thumb(w.file)" type="image/webp">
+              <img [src]="w.file" [alt]="w.title" loading="lazy" width="300" height="375" class="visual-img">
+            </picture>
+            <span class="visual-title">{{ w.title }}</span>
+          </a>
+        }
+      </div>
+      <a class="btn" routerLink="/work">go to my work</a>
+    </section>
+  }
+}
+
+@if (featuredCases$ | async; as cases) {
+  @if (cases.length) {
+    <section class="cases-section">
+      <h2>some case studies</h2>
+      <div class="cases-grid">
+        @for (c of cases; track c.slug) {
+          <a class="case-card" [routerLink]="['/receipts', c.slug]">
+            <span class="eyebrow">{{ c.project }}</span>
+            <h3>{{ c.hook }}</h3>
+            <p>{{ c.line }}</p>
+            <span class="read-link">read the case →</span>
+          </a>
+        }
+      </div>
+      <a class="btn" routerLink="/receipts">see all the receipts</a>
+    </section>
+  }
+}
+
+@if (site$ | async; as site) {
+  <section class="connect-section">
+    <h2>{{ site.home.connectTitle }}</h2>
+    <p>{{ site.home.connectTagline }}</p>
+    <a class="btn" routerLink="/contact">contact me</a>
+    <div class="social-row">
+      @for (s of site.social; track s.url) {
+        <a [href]="s.url" target="_blank" rel="noopener noreferrer">{{ s.label }}</a>
+      }
+    </div>
+    <p class="footer-line">{{ site.home.footer }}</p>
+  </section>
+}

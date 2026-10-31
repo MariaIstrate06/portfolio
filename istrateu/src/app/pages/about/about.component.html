@@ -1,4 +1,29 @@
 <div class="main-page">
   <h1>about me</h1>
-  <p class="placeholder">content coming in phase 4.</p>
+
+  @if (site$ | async; as site) {
+    <div class="about-row">
+      <div class="photo-box">
+        <img
+          src="assets/about/about-me.png"
+          alt="maria istrate"
+          class="photo"
+          width="420"
+          height="525"
+          loading="lazy"
+        >
+      </div>
+      <div class="about-content">
+        @for (p of site.about.paragraphs; track $index) {
+          <p>{{ p }}</p>
+        }
+        <div class="tag-row">
+          <a routerLink="/work/visual-stories" class="tag-link">visual stories</a>
+          <a routerLink="/work/moving-frames" class="tag-link">moving frames</a>
+          <a routerLink="/work/mixed-feelings" class="tag-link">mixed feelings</a>
+          <a routerLink="/work/crowd-control" class="tag-link">crowd control</a>
+        </div>
+      </div>
+    </div>
+  }
 </div>

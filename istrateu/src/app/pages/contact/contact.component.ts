@@ -1,38 +1,40 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AsyncPipe } from '@angular/common';
+import { Observable } from 'rxjs';
+import { ContentService } from '../../services/content.service';
+import { Site } from '../../models';
 
 @Component({
   selector: 'app-contact',
-  imports: [],
+  standalone: true,
+  imports: [AsyncPipe],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.css'
+  styleUrl: './contact.component.css',
 })
-export class ContactComponent {
-    private readonly emailCharCodes = [
-      109, 105, 115, 116, 114, 97, 116, 101, 48, 54, 64, 103, 109, 97, 105, 108,
-      46, 99, 111, 109
-    ];
+export class ContactComponent implements OnInit {
+  site$!: Observable<Site>;
+  copied = false;
 
-    readonly instagramUrl = 'https://www.instagram.com/istrateu/';
-    readonly linkedinUrl = 'https://www.linkedin.com/in/maria-istrate-0b384017b/';
-    readonly tiktokUrl = 'https://www.tiktok.com/@istrateu';
+  constructor(private content: ContentService) {}
 
-    get email(): string {
-      return this.emailCharCodes.map((charCode) => String.fromCharCode(charCode)).join('');
-    }
+  ngOnInit(): void {
+    this.site$ = this.content.getSite();
+  }
 
-    get safeEmailDisplay(): string {
-      return this.email.replace('@', ' [at] ').replace('.', ' [dot] ');
-    }
+  contactByEmail(email: string): void {
+    const subject = encodeURIComponent("Let's connect!");
+    window.location.href = `mailto:${email}?subject=${subject}`;
+  }
 
-    contactByEmail(): void {
-      const subject = encodeURIComponent("Let's connect!");
-      window.location.href = `mailto:${this.email}?subject=${subject}`;
-    }
-
-    copyEmail(): void {
-      navigator.clipboard.writeText(this.email).catch(() => {
+  copyEmail(email: string): void {
+    navigator.clipboard
+      .writeText(email)
+      .then(() => {
+        this.copied = true;
+        setTimeout(() => (this.copied = false), 2000);
+      })
+      .catch(() => {
         // Ignore clipboard errors; users can still use the contact button.
       });
-    }
-
+  }
 }
