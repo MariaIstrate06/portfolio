@@ -1,3 +1,115 @@
-<div class="main-page">
-  <p class="placeholder">content coming in phase 7.</p>
-</div>
+@if (caseStudy$ | async; as cs) {
+  <div class="main-case">
+    <a routerLink="/receipts" class="back-link">← the receipts</a>
+    <span class="eyebrow">{{ cs.project }}</span>
+    <h1>{{ cs.hook }}</h1>
+
+    <div class="meta-strip">
+      <div class="meta-field">
+        <span class="meta-label">role</span>
+        <span class="meta-value">{{ cs.meta.role }}</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">for</span>
+        <span class="meta-value">{{ cs.meta.for }}</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">when</span>
+        <span class="meta-value">{{ cs.meta.when }}</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">channels</span>
+        <span class="meta-value">{{ cs.meta.channels }}</span>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      @if (cs.cover) {
+        <img [src]="cs.cover" [alt]="cs.project" loading="eager" width="1200" height="514" appImgFallback>
+      } @else {
+        <div class="hero-placeholder">
+          <span>[hero image]</span>
+        </div>
+      }
+    </div>
+
+    <div class="sections">
+      <section class="case-section">
+        <span class="section-eyebrow">01 — context</span>
+        <p>{{ cs.sections.context }}</p>
+      </section>
+
+      <section class="case-section">
+        <span class="section-eyebrow">02 — the problem</span>
+        <p>{{ cs.sections.problem }}</p>
+      </section>
+
+      <section class="case-section">
+        <span class="section-eyebrow">03 — the idea</span>
+        <p class="idea-quote">{{ cs.sections.idea }}</p>
+      </section>
+
+      @if (cs.sections.whatWeDid.length || cs.images.length) {
+        <section class="case-section">
+          <span class="section-eyebrow">04 — what we did</span>
+
+          @if (cs.sections.whatWeDid.length) {
+            <div class="tactics-grid">
+              @for (t of cs.sections.whatWeDid; track t.title) {
+                <div class="tactic-card">
+                  <h3>{{ t.title }}</h3>
+                  <p>{{ t.text }}</p>
+                </div>
+              }
+            </div>
+          }
+
+          @if (cs.images.length) {
+            <div class="gallery-grid">
+              @for (img of cs.images; track img.caption) {
+                <div class="gallery-item">
+                  @if (img.file) {
+                    <img [src]="img.file" [alt]="img.caption" loading="lazy" width="300" height="375" appImgFallback>
+                  } @else {
+                    <div class="gallery-placeholder">
+                      <span>{{ img.caption }}</span>
+                    </div>
+                  }
+                </div>
+              }
+            </div>
+          }
+        </section>
+      }
+
+      @if (cs.sections.results.length) {
+        <section class="case-section">
+          <span class="section-eyebrow">05 — results</span>
+          <div class="results-grid">
+            @for (r of cs.sections.results; track r.label) {
+              <div class="result-tile">
+                <span class="result-number">{{ r.number }}</span>
+                <span class="result-label">{{ r.label }}</span>
+              </div>
+            }
+          </div>
+        </section>
+      }
+
+      <section class="case-section">
+        <span class="section-eyebrow">06 — my part</span>
+        <p>{{ cs.sections.myPart }}</p>
+      </section>
+    </div>
+
+    @if (nextCase$ | async; as next) {
+      <a class="next-case-card" [routerLink]="['/receipts', next.slug]">
+        <span class="next-label">next case</span>
+        <span class="next-title">{{ next.project }} — {{ next.hook }}</span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    }
+  </div>
+} @else {
+  <p class="not-found">case study not found.</p>
+}

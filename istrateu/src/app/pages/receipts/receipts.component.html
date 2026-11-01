@@ -1,4 +1,30 @@
-<div class="main-page">
+<div class="main-receipts">
   <h1>the receipts</h1>
-  <p class="placeholder">content coming in phase 7.</p>
+  <p class="subtitle">case studies. the brief, the idea, and what actually happened.</p>
+
+  @if (caseStudies$ | async; as cases) {
+    <div class="cases-grid">
+      @for (c of cases; track c.slug) {
+        <a class="case-card" [routerLink]="['/receipts', c.slug]">
+          <div class="cover-box">
+            @if (c.cover) {
+              <img [src]="c.cover" [alt]="c.project" loading="lazy" width="400" height="225" appImgFallback>
+            } @else {
+              <div class="cover-placeholder"></div>
+            }
+          </div>
+          <div class="case-body">
+            <span class="eyebrow">{{ c.project }}</span>
+            <h2>{{ c.hook }}</h2>
+            <p class="line">{{ c.line }}</p>
+            <div class="tag-row">
+              @for (t of c.tags; track t) {
+                <span class="tag-pill">{{ t }}</span>
+              }
+            </div>
+          </div>
+        </a>
+      }
+    </div>
+  }
 </div>

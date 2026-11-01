@@ -2,6 +2,85 @@
   display: block;
   width: 100%;
 }
-.placeholder {
+
+.main-receipts {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.subtitle {
+  color: var(--text-muted-2);
+  margin-bottom: 2em;
+}
+
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.8em;
+}
+
+.case-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line-2);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--surface);
+  transition: transform 0.3s ease;
+}
+
+.case-card:hover {
+  transform: translateY(-4px);
+}
+
+.cover-box {
+  aspect-ratio: 16 / 9;
+  background: var(--surface-2);
+}
+
+.cover-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cover-placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+.case-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 1.3em;
+}
+
+.eyebrow {
+  color: var(--green);
+  font-size: 0.85em;
+}
+
+.case-body h2 {
+  font-size: 1.2em;
+}
+
+.line {
   color: var(--text-muted);
+  font-size: 0.9em;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin-top: 0.3em;
+}
+
+.tag-pill {
+  font-size: 0.7em;
+  padding: 0.2em 0.7em;
+  border: 1px solid var(--line-3);
+  border-radius: 999px;
+  color: var(--text-muted-2);
 }
