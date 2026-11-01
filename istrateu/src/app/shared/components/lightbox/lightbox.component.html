@@ -1,0 +1,35 @@
+@if (current) {
+  <div class="lightbox-overlay" (click)="close()">
+    <div
+      #panel
+      class="lightbox-panel"
+      role="dialog"
+      aria-modal="true"
+      [attr.aria-label]="current.title"
+      tabindex="-1"
+      (click)="$event.stopPropagation()"
+      (touchstart)="onTouchStart($event)"
+      (touchend)="onTouchEnd($event)"
+    >
+      <button type="button" class="close-btn" (click)="close()" aria-label="Close">✕</button>
+
+      @if (items.length > 1) {
+        <button type="button" class="nav-btn prev" (click)="prev()" aria-label="Previous image">‹</button>
+      }
+
+      <picture>
+        <source [srcset]="current.image" type="image/webp">
+        <img [src]="current.fallback" [alt]="current.alt" class="lightbox-img">
+      </picture>
+
+      @if (items.length > 1) {
+        <button type="button" class="nav-btn next" (click)="next()" aria-label="Next image">›</button>
+      }
+
+      <div class="lightbox-caption">
+        <h3>{{ current.title }}</h3>
+        <p>{{ current.meta }}</p>
+      </div>
+    </div>
+  </div>
+}

@@ -1,4 +1,70 @@
 <div class="main-vs">
+  <a routerLink="/work" class="back-link">← my work</a>
   <h1>visual stories</h1>
-  <p class="placeholder">content coming in phase 5.</p>
+  <p class="subtitle">designs worth every pixel</p>
+
+  <nav class="chip-row" aria-label="jump to branch">
+    @for (b of branches; track b) {
+      <a [href]="'#' + branchInfo[b].anchor" class="chip-link">
+        <span class="dot" [style.background]="branchInfo[b].bg"></span>
+        {{ branchInfo[b].name }}
+      </a>
+    }
+  </nav>
+
+  @if (worksByBranch$ | async; as grouped) {
+    @for (b of branches; track b) {
+      <section [id]="branchInfo[b].anchor" class="branch-section">
+        <div class="branch-band" [style.background]="branchInfo[b].bg" [style.color]="branchInfo[b].ink">
+          <span class="branch-num">{{ branchInfo[b].num }}</span>
+          <div class="branch-text">
+            <h2>{{ branchInfo[b].name }}</h2>
+            <p>{{ branchInfo[b].sub }}</p>
+          </div>
+        </div>
+
+        @if (grouped[b].length) {
+          <div class="branch-grid">
+            @for (w of grouped[b]; track w.id; let i = $index) {
+              <button
+                type="button"
+                class="work-card"
+                (click)="openLightbox(b, grouped[b], i)"
+              >
+                <span class="work-thumb-box" [style.borderTopColor]="branchInfo[b].bg">
+                  <picture>
+                    <source [srcset]="thumb(w.file)" type="image/webp">
+                    <img
+                      [src]="w.file"
+                      [alt]="w.title"
+                      loading="lazy"
+                      width="300"
+                      height="300"
+                      class="work-thumb"
+                      appImgFallback
+                    >
+                  </picture>
+                </span>
+                <span class="work-title">{{ w.title }}</span>
+                @if (w.meta) {
+                  <span class="work-meta">{{ w.meta }}</span>
+                }
+              </button>
+            }
+          </div>
+        } @else {
+          <p class="empty-note">no works yet for this branch.</p>
+        }
+      </section>
+    }
+  }
 </div>
+
+@if (lightboxOpen) {
+  <app-lightbox
+    [items]="lightboxItems"
+    [index]="lightboxIndex"
+    (closed)="closeLightbox()"
+    (indexChange)="lightboxIndex = $event"
+  ></app-lightbox>
+}

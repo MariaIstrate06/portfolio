@@ -1,0 +1,13 @@
+<div class="chip-row" role="group">
+  @for (chip of chips; track chip.key) {
+    <button
+      type="button"
+      class="chip"
+      [class.active]="chip.key === active"
+      [attr.aria-pressed]="chip.key === active"
+      (click)="select(chip.key)"
+    >
+      {{ chip.label }}
+    </button>
+  }
+</div>
