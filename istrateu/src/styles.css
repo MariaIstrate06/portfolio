@@ -66,16 +66,6 @@ a{
 }
 html, body { height: 100%; }
 
-.coming-soon{
-  display: flex;
-  color: var(--green);
-  height: 70%;
-  font-weight: 900;
-  font-size: 4em;
-  justify-content: center;
-  align-items: center;
-}
-
 /* Primary CTA pill button — used across the whole site (brief §3) */
 .btn {
   display: inline-flex;
@@ -103,12 +93,17 @@ html, body { height: 100%; }
 }
 
 @media (max-width: 768px) {
-  .coming-soon{
-    font-size: 2em;
-  }
-
   .btn {
     font-size: 1.1em;
     padding: 0.6em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

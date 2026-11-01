@@ -19,7 +19,7 @@
         <a class="big-card" [routerLink]="['/receipts', e.caseStudy]">
           <div class="big-image">
             @if (e.image) {
-              <img [src]="e.image" [alt]="e.name" loading="lazy" width="480" height="270" appImgFallback>
+              <img [src]="e.image" alt="" loading="lazy" width="480" height="270" appImgFallback>
             } @else {
               <div class="image-placeholder"></div>
             }

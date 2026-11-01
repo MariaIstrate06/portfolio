@@ -59,6 +59,11 @@ export class AppComponent implements OnInit {
   }
 
   prepareRoute(outlet: RouterOutlet): string {
+    // prefers-reduced-motion: keep the trigger value constant so the
+    // '* <=> *' transition never actually fires on route changes.
+    if (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return 'static';
+    }
     return outlet?.isActivated ? outlet.activatedRoute.snapshot.url.join('/') || 'home' : '';
   }
 }

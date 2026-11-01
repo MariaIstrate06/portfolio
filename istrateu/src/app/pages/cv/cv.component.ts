@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 // import your JSON data directly (make sure tsconfig.json has resolveJsonModule: true)
 import cvData from './cv_data.json';
@@ -31,7 +30,7 @@ interface Category {
 @Component({
   selector: 'app-cv',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './cv.component.html',
   styleUrls: ['./cv.component.css'],
 })

@@ -8,7 +8,7 @@
         <a class="case-card" [routerLink]="['/receipts', c.slug]">
           <div class="cover-box">
             @if (c.cover) {
-              <img [src]="c.cover" [alt]="c.project" loading="lazy" width="400" height="225" appImgFallback>
+              <img [src]="c.cover" alt="" loading="lazy" width="400" height="225" appImgFallback>
             } @else {
               <div class="cover-placeholder"></div>
             }
