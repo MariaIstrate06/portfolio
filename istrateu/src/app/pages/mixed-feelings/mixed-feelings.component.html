@@ -1,4 +1,117 @@
-<div class="main-page">
+<div class="main-mixed">
+  <a routerLink="/work" class="back-link">← my work</a>
   <h1>mixed feelings</h1>
-  <p class="placeholder">content coming in phase 6.</p>
+  <p class="subtitle">tracks i made, produced and mixed — and the gigs where i ran the sound</p>
+
+  @if (current) {
+    <div class="player-card">
+      <div class="player-header">
+        <div>
+          <span class="eyebrow">now playing</span>
+          <h2>{{ current.title }}</h2>
+          <p class="artist">{{ current.artist }}</p>
+        </div>
+        <span class="stage-badge" [style.color]="stageColorVar">{{ stageLabel }}</span>
+      </div>
+
+      <div class="controls-row">
+        <button
+          type="button"
+          class="play-btn"
+          (click)="togglePlay()"
+          [attr.aria-label]="playing ? 'Pause' : 'Play'"
+        >
+          @if (playing) {
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <rect x="6" y="5" width="4" height="14"></rect>
+              <rect x="14" y="5" width="4" height="14"></rect>
+            </svg>
+          } @else {
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M8 5v14l11-7z"></path>
+            </svg>
+          }
+        </button>
+
+        <app-waveform-canvas
+          class="waveform"
+          [peaks]="peaks"
+          [progress]="progress"
+          [color]="stageColorVar"
+          (seek)="onSeek($event)"
+        ></app-waveform-canvas>
+      </div>
+
+      <div class="checkbox-row">
+        <span class="checkbox-label">hear it at each stage:</span>
+        <label class="checkbox" [class.disabled]="!hasFile('production')">
+          <input
+            type="checkbox"
+            [checked]="player.production"
+            [disabled]="!hasFile('production')"
+            (change)="toggleProduction($any($event.target).checked)"
+          >
+          production
+        </label>
+        <label class="checkbox" [class.disabled]="!hasFile('mix')">
+          <input
+            type="checkbox"
+            [checked]="player.mix"
+            [disabled]="!hasFile('mix')"
+            (change)="toggleMix($any($event.target).checked)"
+          >
+          mix
+        </label>
+        <span class="helper-text">nothing ticked = the raw recording</span>
+      </div>
+    </div>
+  }
+
+  <div class="tracklist-header">
+    <h2>tracklist</h2>
+    <app-chip-row [chips]="filters" [active]="activeFilter" (activeChange)="activeFilter = $event"></app-chip-row>
+  </div>
+
+  <div class="tracklist">
+    @for (entry of filteredTracks; track entry.index; let n = $index) {
+      <div class="track-row" [class.selected]="entry.index === selectedIndex">
+        <span class="track-n">{{ trackNumber(n) }}</span>
+        <button type="button" class="track-main" (click)="selectTrack(entry.index)">
+          <span class="track-title">{{ entry.track.title }}</span>
+          <span class="track-artist">{{ entry.track.artist }}</span>
+        </button>
+        <span class="track-tags">
+          @for (tag of entry.track.tags; track tag) {
+            <span class="tag-pill">{{ tag }}</span>
+          }
+        </span>
+        @if (entry.track.spotify) {
+          <a [href]="entry.track.spotify" target="_blank" rel="noopener noreferrer" class="spotify-link">
+            on spotify ↗
+          </a>
+        }
+      </div>
+    }
+  </div>
+
+  @if (gigLog$ | async; as log) {
+    <section class="gig-log">
+      <h2>gig log</h2>
+      <p class="subtitle">live sound. no footage, just the setup notes.</p>
+      <div class="gigs-grid">
+        @for (g of log.gigs; track g.event + g.role) {
+          <div class="gig-card">
+            <span class="gig-date">{{ g.date }}</span>
+            <span class="gig-event">{{ g.event }}</span>
+            <span class="gig-role">{{ g.role }}</span>
+            <span class="gig-note">{{ g.note }}</span>
+          </div>
+        }
+      </div>
+      <blockquote class="quote">
+        "{{ log.quote.line }}"
+        <footer>— {{ log.quote.attribution }}</footer>
+      </blockquote>
+    </section>
+  }
 </div>

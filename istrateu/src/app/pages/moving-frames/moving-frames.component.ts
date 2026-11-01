@@ -1,42 +1,46 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-
-interface VideoFrame {
-  title: string;
-  description: string;
-  embedUrl: string;
-}
+import { Component, OnInit } from '@angular/core';
+import { AsyncPipe } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { Observable } from 'rxjs';
+import { ContentService } from '../../services/content.service';
+import { Video } from '../../models';
+import { Chip, ChipRowComponent } from '../../shared/components/chip-row/chip-row.component';
+import { VideoFacadeComponent } from '../../shared/components/video-facade/video-facade.component';
 
 @Component({
   selector: 'app-moving-frames',
-  imports: [CommonModule],
+  standalone: true,
+  imports: [AsyncPipe, RouterLink, ChipRowComponent, VideoFacadeComponent],
   templateUrl: './moving-frames.component.html',
-  styleUrl: './moving-frames.component.css'
+  styleUrl: './moving-frames.component.css',
 })
-export class MovingFramesComponent {
-  // Replace embedUrl with your own links, title/description are yours to write:
-  // YouTube -> https://www.youtube.com/embed/VIDEO_ID
-  // Drive    -> https://drive.google.com/file/d/FILE_ID/preview
-  videos: VideoFrame[] = [
-    { title: 'TEDxIasi 2024', description: 'Shot, directed, color graded and edited', embedUrl: 'https://www.youtube.com/embed/Zazij9LNtAY' },
-    { title: 'Short Video Documentary', description: 'Shot, directed, color graded and edited', embedUrl: 'https://www.youtube.com/embed/VhS5P_HbBeQ' },
-    { title: 'Motion Lyrics Video', description: 'Edited', embedUrl: 'https://www.youtube.com/embed/r01T7p3PCsw' },
-    { title: 'Promotional Video - Escape Land', description: 'Edited', embedUrl: 'https://www.youtube.com/embed/ZF_SRc_7lhk' },
-    { title: 'Promotional Video - Drive in', description: 'Shot, edited', embedUrl: 'https://www.youtube.com/embed/65DFe5O06rA' },
-    { title: 'Aftermovie - CDR25', description: 'Shot, edited', embedUrl: 'https://www.youtube.com/embed/5jIWTyK3np8' },
-    { title: 'Safety driving campaigns', description: 'Scripted, shot, directed, color graded & edited', embedUrl: 'https://www.youtube.com/embed/REESHi9TmmA' }
+export class MovingFramesComponent implements OnInit {
+  readonly filters: Chip[] = [
+    { key: 'all', label: 'all' },
+    { key: 'youtube', label: 'youtube' },
+    { key: 'tiktok', label: 'tiktok' },
+    { key: 'instagram', label: 'instagram' },
   ];
+  active = 'all';
 
-  constructor(private sanitizer: DomSanitizer) {}
+  videos$!: Observable<Video[]>;
 
-  safeUrl(url: string): SafeResourceUrl {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  constructor(private content: ContentService) {}
+
+  ngOnInit(): void {
+    this.videos$ = this.content.getVideos();
   }
 
-  platform(url: string): 'youtube' | 'drive' | 'video' {
-    if (url.includes('youtube') || url.includes('youtu.be')) return 'youtube';
-    if (url.includes('drive.google')) return 'drive';
-    return 'video';
+  private filtered(videos: Video[]): Video[] {
+    // prefix match so the "youtube" filter also picks up "youtube-shorts"
+    return videos.filter(v => this.active === 'all' || v.platform.startsWith(this.active));
+  }
+
+  wide(videos: Video[]): Video[] {
+    return this.filtered(videos).filter(v => v.orientation === 'wide');
+  }
+
+  tall(videos: Video[]): Video[] {
+    return this.filtered(videos).filter(v => v.orientation === 'vertical');
   }
 }

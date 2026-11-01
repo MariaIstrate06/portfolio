@@ -1,4 +1,49 @@
-<div class="main-page">
+<div class="main-cc">
+  <a routerLink="/work" class="back-link">← my work</a>
   <h1>crowd control</h1>
-  <p class="placeholder">content coming in phase 6.</p>
+  <p class="subtitle">events i made happen</p>
+
+  @if (events$ | async; as events) {
+    <div class="stats-grid">
+      @for (s of events.stats; track s.label) {
+        <div class="stat-tile">
+          <span class="stat-number">{{ s.number }}</span>
+          <span class="stat-label">{{ s.label }}</span>
+        </div>
+      }
+    </div>
+
+    <h2>the big ones</h2>
+    <div class="big-grid">
+      @for (e of events.big; track e.name) {
+        <a class="big-card" [routerLink]="['/receipts', e.caseStudy]">
+          <div class="big-image">
+            @if (e.image) {
+              <img [src]="e.image" [alt]="e.name" loading="lazy" width="480" height="270" appImgFallback>
+            } @else {
+              <div class="image-placeholder"></div>
+            }
+          </div>
+          <div class="big-body">
+            <h3>{{ e.name }} <span class="years">{{ e.years }}</span></h3>
+            <p class="role">{{ e.role }}</p>
+            <p class="line">{{ e.line }}</p>
+            <span class="read-link">read the case study →</span>
+          </div>
+        </a>
+      }
+    </div>
+
+    <h2>also on the list</h2>
+    <div class="small-list">
+      @for (e of events.small; track e.name) {
+        <div class="small-row">
+          <span class="small-year">{{ e.year }}</span>
+          <span class="small-name">{{ e.name }}</span>
+          <span class="small-role">{{ e.role }}</span>
+          <span class="small-line">{{ e.line }}</span>
+        </div>
+      }
+    </div>
+  }
 </div>

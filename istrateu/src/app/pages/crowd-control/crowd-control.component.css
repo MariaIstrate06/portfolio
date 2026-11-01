@@ -2,6 +2,159 @@
   display: block;
   width: 100%;
 }
-.placeholder {
+
+.main-cc {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.back-link {
+  color: var(--text-muted-2);
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+.back-link:hover {
+  color: var(--green);
+}
+
+.subtitle {
+  color: var(--text-muted-2);
+  margin-bottom: 2em;
+}
+
+h2 {
+  margin: 2em 0 1em;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1em;
+}
+
+.stat-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  padding: 1.2em;
+  border: 1px solid var(--line-2);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.stat-number {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.stat-label {
+  color: var(--text-muted-2);
+  font-size: 0.85em;
+}
+
+.big-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5em;
+}
+
+.big-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line-2);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--surface);
+  transition: transform 0.3s ease;
+}
+
+.big-card:hover {
+  transform: translateY(-4px);
+}
+
+.big-image {
+  aspect-ratio: 16 / 9;
+  background: var(--surface-2);
+}
+
+.big-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+.big-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  padding: 1.2em;
+}
+
+.big-body h3 {
+  font-size: 1.1em;
+}
+
+.years {
+  color: var(--green);
+  font-size: 0.8em;
+  font-weight: 400;
+}
+
+.role {
+  color: var(--text-muted-2);
+  font-size: 0.9em;
+}
+
+.line {
   color: var(--text-muted);
+  font-size: 0.9em;
+}
+
+.read-link {
+  margin-top: auto;
+  color: var(--green);
+  font-size: 0.9em;
+}
+
+.small-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--line);
+}
+
+.small-row {
+  display: grid;
+  grid-template-columns: 72px 1fr 1fr 2fr;
+  gap: 1em;
+  align-items: baseline;
+  padding: 0.9em 0.3em;
+  border-bottom: 1px solid var(--line);
+}
+
+.small-year {
+  color: var(--green);
+}
+
+.small-name {
+  font-weight: 600;
+}
+
+.small-role,
+.small-line {
+  color: var(--text-muted);
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .small-row {
+    grid-template-columns: 1fr;
+    gap: 0.3em;
+  }
 }

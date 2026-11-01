@@ -1,0 +1,43 @@
+<div class="video-facade" [class.vertical]="video.orientation === 'vertical'">
+  <div class="facade-box">
+    @if (!playing) {
+      <button
+        type="button"
+        class="facade-thumb"
+        (click)="play()"
+        [attr.aria-label]="'Play ' + video.title"
+        [disabled]="isPlaceholder"
+      >
+        @if (thumbnail) {
+          <img [src]="thumbnail" [alt]="video.title" loading="lazy" class="thumb-img" appImgFallback>
+        } @else {
+          <div class="thumb-placeholder"></div>
+        }
+        @if (!isPlaceholder) {
+          <span class="play-btn" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </span>
+        }
+      </button>
+    } @else {
+      <iframe
+        [src]="safeEmbedUrl"
+        class="player-frame"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        title="{{ video.title }}"
+      ></iframe>
+    }
+  </div>
+
+  <div class="video-meta">
+    <span class="video-title">{{ video.title }}</span>
+    <span class="video-role">{{ platformLabel }} · {{ video.role }}</span>
+    @if (showExternalLink) {
+      <a [href]="externalUrl" target="_blank" rel="noopener noreferrer" class="external-link">
+        open on {{ platformLabel }} ↗
+      </a>
+    }
+  </div>
+</div>

@@ -1,10 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AsyncPipe } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { Observable } from 'rxjs';
+import { ContentService } from '../../services/content.service';
+import { Events } from '../../models';
+import { ImgFallbackDirective } from '../../shared/directives/img-fallback.directive';
 
 @Component({
   selector: 'app-crowd-control',
   standalone: true,
-  imports: [],
+  imports: [AsyncPipe, RouterLink, ImgFallbackDirective],
   templateUrl: './crowd-control.component.html',
-  styleUrls: ['./crowd-control.component.css'],
+  styleUrl: './crowd-control.component.css',
 })
-export class CrowdControlComponent {}
+export class CrowdControlComponent implements OnInit {
+  events$!: Observable<Events>;
+
+  constructor(private content: ContentService) {}
+
+  ngOnInit(): void {
+    this.events$ = this.content.getEvents();
+  }
+}
