@@ -1,0 +1,31 @@
+{
+  "hero": {
+    "title": "hi! i'm maria, nice to meet you.",
+    "tagline": "jack of all trades, master of puppets"
+  },
+  "home": {
+    "aboutBlurb": "a creative from iași who never managed to pick just one thing: design, video, sound, and the events where all of it meets. ex-frontend engineer, ex-art director, founder of fix media records.",
+    "selectedVisualsTitle": "selected visuals",
+    "caseStudiesTitle": "some case studies",
+    "connectTitle": "let's connect",
+    "connectTagline": "open to collaborations, creative projects and the occasional crazy idea.",
+    "footer": "© maria istrate · iași, romania"
+  },
+  "about": {
+    "paragraphs": [
+      "i'm maria, a creative from iași who never managed to pick just one thing.",
+      "i studied computer science, spent a few years building interfaces at deloitte, then followed the part of the job i liked most: the ideas. since then i've art-directed pharmacy campaigns at v8interactive, helped sell out every TEDxIași event, convinced a city to buy 3,000 rubber ducks in one week for a children's neuropsychiatry ward, and started a record label (fix media records) and a creative house (fixera media house).",
+      "i design, i edit video, i produce and mix music, and i organize the events where all of it gets used. what ties it together is simple: i like making things people actually show up for.",
+      "got a brief, a stage or a half-crazy idea? i'm probably in."
+    ]
+  },
+  "contact": {
+    "intro": "open to collaborations, creative projects and the occasional crazy idea."
+  },
+  "email": "mistrate06@gmail.com",
+  "social": [
+    { "label": "instagram", "url": "https://www.instagram.com/istrateu/" },
+    { "label": "linkedin", "url": "https://www.linkedin.com/in/maria-istrate-0b384017b/" },
+    { "label": "tiktok", "url": "https://www.tiktok.com/@istrateu" }
+  ]
+}
