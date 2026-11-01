@@ -1,0 +1,67 @@
+.work-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  padding: 0.8em 0.3em;
+  border-top: 1px solid var(--line);
+}
+
+.row-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+.row-main input[type='checkbox'] {
+  width: 22px;
+  height: 22px;
+  accent-color: var(--green);
+  flex-shrink: 0;
+}
+
+.swatch {
+  width: 42px;
+  height: 52px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.row-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-pillar {
+  font-size: 0.8em;
+  color: var(--text-muted);
+}
+
+.reorder-controls {
+  display: flex;
+  gap: 0.4em;
+  flex-shrink: 0;
+}
+
+.reorder-controls button {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  border: 1px solid var(--line-3);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.reorder-controls button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.reorder-controls button:not(:disabled):hover {
+  border-color: var(--green);
+  color: var(--green);
+}

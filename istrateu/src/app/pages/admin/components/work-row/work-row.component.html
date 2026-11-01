@@ -1,0 +1,17 @@
+<div class="work-row">
+  <label class="row-main">
+    <input type="checkbox" [checked]="work.featured" (change)="toggled.emit()">
+    <span class="swatch" [style.background]="color"></span>
+    <span class="row-text">
+      <span class="row-title">{{ work.title }}</span>
+      <span class="row-pillar">{{ work.branch }}</span>
+    </span>
+  </label>
+
+  @if (work.featured) {
+    <div class="reorder-controls">
+      <button type="button" (click)="moveUp.emit()" [disabled]="!canMoveUp" aria-label="Move up in featured order">↑</button>
+      <button type="button" (click)="moveDown.emit()" [disabled]="!canMoveDown" aria-label="Move down in featured order">↓</button>
+    </div>
+  }
+</div>

@@ -1,4 +1,68 @@
-<div class="main-page">
-  <h1>admin</h1>
-  <p class="placeholder">content coming in phase 8.</p>
+<div class="main-admin">
+  @if (!hasToken) {
+    <div class="token-gate">
+      <h1>admin</h1>
+      <p>
+        enter a fine-grained github token with <strong>contents read/write</strong> scoped to this repo only.
+        it's stored in this browser's local storage, sent only to api.github.com, and never committed or logged.
+      </p>
+      <div class="token-form">
+        <input
+          type="password"
+          [(ngModel)]="tokenInput"
+          placeholder="github personal access token"
+          (keydown.enter)="submitToken()"
+          autocomplete="off"
+        >
+        <button type="button" class="btn" (click)="submitToken()">save token</button>
+      </div>
+    </div>
+  } @else {
+    <div class="admin-header">
+      <h1>admin</h1>
+      <div class="header-actions">
+        @if (!loading && !loadError) {
+          <span class="counter">{{ featuredCount }} featured on home</span>
+        }
+        <button type="button" class="forget-btn" (click)="forgetToken()">forget token</button>
+      </div>
+    </div>
+
+    <p class="helper-text">tick what shows up in "selected visuals" on home. save = one commit to the repo.</p>
+
+    @if (loading) {
+      <p class="status-text">loading works.json…</p>
+    } @else if (loadError) {
+      <p class="status-text error">{{ loadError }}</p>
+    } @else {
+      <app-chip-row [chips]="filters" [active]="activeFilter" (activeChange)="activeFilter = $event"></app-chip-row>
+
+      <div class="row-list">
+        @for (w of visibleWorks; track w.id) {
+          <app-work-row
+            [work]="w"
+            [color]="colorFor(w.branch)"
+            [canMoveUp]="!isFirstFeatured(w)"
+            [canMoveDown]="!isLastFeatured(w)"
+            (toggled)="toggleFeatured(w)"
+            (moveUp)="moveUp(w)"
+            (moveDown)="moveDown(w)"
+          ></app-work-row>
+        }
+      </div>
+
+      <div class="save-row">
+        <button type="button" class="btn" (click)="save()" [disabled]="saveState === 'saving'">
+          {{ saveState === 'saving' ? 'saving…' : 'save changes' }}
+        </button>
+        @if (saveState === 'success') {
+          <span class="save-status success">saved — live in ~2 min.</span>
+        }
+        @if (saveState === 'error') {
+          <span class="save-status error">{{ saveError }}</span>
+        }
+      </div>
+      <p class="disclaimer">github token stays in this browser, never in the code.</p>
+    }
+  }
 </div>
