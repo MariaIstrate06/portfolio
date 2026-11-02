@@ -5,8 +5,8 @@
     "title": "Bucurat Logo",
     "meta": "",
     "file": "assets/digital/vs-digital-bucurat-logo.png",
-    "featured": false,
-    "order": 10
+    "featured": true,
+    "order": 530
   },
   {
     "id": "vs-digital-cash-icon-logo",
@@ -23,8 +23,8 @@
     "title": "Cdr Brandbook",
     "meta": "",
     "file": "assets/digital/vs-digital-cdr-brandbook.png",
-    "featured": false,
-    "order": 30
+    "featured": true,
+    "order": 540
   },
   {
     "id": "vs-digital-dia-titiserv-brandbook",
@@ -140,8 +140,8 @@
     "title": "Active Citizens Totebags",
     "meta": "",
     "file": "assets/print/vs-print-active-citizens-totebags.png",
-    "featured": false,
-    "order": 160
+    "featured": true,
+    "order": 550
   },
   {
     "id": "vs-print-bucurat-cani",
@@ -149,8 +149,8 @@
     "title": "Bucurat Cani",
     "meta": "",
     "file": "assets/print/vs-print-bucurat-cani.png",
-    "featured": false,
-    "order": 170
+    "featured": true,
+    "order": 560
   },
   {
     "id": "vs-print-bucurat-roll-up",
@@ -185,8 +185,8 @@
     "title": "Cdr Billboard",
     "meta": "",
     "file": "assets/print/vs-print-cdr-billboard.png",
-    "featured": false,
-    "order": 210
+    "featured": true,
+    "order": 570
   },
   {
     "id": "vs-print-cdr-brochure",
@@ -239,8 +239,8 @@
     "title": "Gala Asii",
     "meta": "",
     "file": "assets/print/vs-print-gala-asii.png",
-    "featured": false,
-    "order": 270
+    "featured": true,
+    "order": 580
   },
   {
     "id": "vs-print-gloria-breloc",
@@ -285,7 +285,7 @@
     "meta": "",
     "file": "assets/print/vs-print-retrebled-totebags.png",
     "featured": false,
-    "order": 320
+    "order": 590
   },
   {
     "id": "vs-print-retrebled-tricouri",
@@ -294,7 +294,7 @@
     "meta": "",
     "file": "assets/print/vs-print-retrebled-tricouri.png",
     "featured": false,
-    "order": 330
+    "order": 600
   },
   {
     "id": "vs-print-studinsight",
@@ -302,8 +302,8 @@
     "title": "Studinsight",
     "meta": "",
     "file": "assets/print/vs-print-studinsight.png",
-    "featured": false,
-    "order": 340
+    "featured": true,
+    "order": 610
   },
   {
     "id": "vs-print-volunteer-badge",
@@ -374,8 +374,8 @@
     "title": "Hertz Room",
     "meta": "",
     "file": "assets/social/vs-social-hertz-room.png",
-    "featured": false,
-    "order": 420
+    "featured": true,
+    "order": 620
   },
   {
     "id": "vs-social-retrebled",
@@ -392,8 +392,8 @@
     "title": "Rotaract Xmas",
     "meta": "",
     "file": "assets/social/vs-social-rotaract-xmas.png",
-    "featured": false,
-    "order": 440
+    "featured": true,
+    "order": 630
   },
   {
     "id": "vs-social-sens-carousel",
