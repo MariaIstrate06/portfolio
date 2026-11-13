@@ -1,110 +1,184 @@
 [
   {
     "slug": "cursa-de-ratuste",
-    "project": "cursa de rățuște · rotaract iași",
-    "hook": "3,000 rubber ducks in 7 days.",
-    "line": "[placeholder]",
-    "tags": ["campaign", "social", "web"],
+    "project": "cursa de rățuște",
+    "hook": "3,000 rubber ducks in 14 days.",
+    "line": "a fun duck run for a good cause",
+    "tags": [
+      "campaign",
+      "social",
+      "web"
+    ],
     "cover": "assets/case-studies/cs-cdr-gossip-duck-packs.png",
     "meta": {
       "role": "campaign lead",
       "for": "rotaract club iași",
-      "when": "2025 – 2026, two editions",
+      "when": "2025 and 2026, two editions",
       "channels": "social, reddit, OOH, web"
     },
     "sections": {
-      "context": "cursa de rățuște is a charity rubber duck race in iași. people adopt a numbered rubber duck, the ducks race [where / how], and every duck sold funds a children's neuropsychiatry ward.",
-      "problem": "a few weeks before race day, sales stalled. the people who buy for a good cause had already bought, and [X] ducks were still waiting for a home. another 'please support us' post wasn't going to fix that.",
+      "context": "cursa de rățuște is a charity rubber duck race in iași. people adopt a numbered rubber duck, the ducks race on the Bahlui River, on the first of june (international children's day) every year, and every duck sold funds the cause rotaract chose to fight for that year.",
+      "problem": "a few weeks before race day, sales stalled. the people who buy for a good cause had already bought, and 3.000 ducks were still waiting for a home. another 'please support us' post wasn't going to fix that.",
       "idea": "stop asking for donations. give people a reason to buy today, and talk to every audience in its own language.",
       "whatWeDid": [
-        { "title": "a week of rapid-fire deals", "text": "daily giveaways and sponsor 1+1 offers with deadlines." },
-        { "title": "ducks with a voice", "text": "gen z / millennial message variants, propaganda-style humor, guerrilla marketing." },
-        { "title": "rubber duck debugging, for charity", "text": "a reddit r/programare post targeting programmers; corporate IT workers became the biggest buyers." },
-        { "title": "a website that listens", "text": "built the event site to track where sales came from, and reallocated budget/messaging to what converted." }
+        {
+          "title": "a week of rapid-fire deals",
+          "text": "daily giveaways and sponsor 1+1 offers with deadlines."
+        },
+        {
+          "title": "ducks with a voice",
+          "text": "gen z / millennial message variants, propaganda-style humor, guerrilla marketing."
+        },
+        {
+          "title": "rubber duck debugging, for charity",
+          "text": "a reddit r/iasi post targeting programmers; corporate IT workers became the biggest buyers."
+        }
       ],
       "results": [
-        { "number": "3,000", "label": "ducks sold in 7 days" },
-        { "number": "10+", "label": "campaigns across two editions" },
-        { "number": "[X]", "label": "raised for the ward" },
-        { "number": "[X]", "label": "people on race day" }
+        {
+          "number": "3,000",
+          "label": "ducks sold in 7 days"
+        },
+        {
+          "number": "5+",
+          "label": "campaigns in two weeks"
+        },
+        {
+          "number": "22.000€",
+          "label": "raised for the children"
+        },
+        {
+          "number": "10.000",
+          "label": "people on race day"
+        }
       ],
-      "myPart": "campaign concepts, copy, design and the website. team: [names / roles from rotaract iași]."
+      "myPart": "campaign concepts, copywriting, graphic design, social media management. team: my dear friends from rotaract iași."
     },
     "images": [
-      { "file": null, "caption": "[giveaway post]" },
-      { "file": null, "caption": "[reddit post screenshot]" },
-      { "file": null, "caption": "[billboard / banner]" }
+      {
+        "file": "assets/case-studies/genz.png",
+        "caption": "choose your duck: the gen z variant"
+      },
+      {
+        "file": "assets/case-studies/cdr_offer1+1.png",
+        "caption": "sponsor 1+1 offer, deadline included"
+      },
+      {
+        "file": "assets/case-studies/sold_out.png",
+        "caption": "sold out. all 3,000 of them."
+      }
     ],
     "featuredOnHome": true
   },
   {
-    "slug": "tedxiasi",
-    "project": "tedxiași · 2024 & live 2025",
-    "hook": "every event, sold out.",
-    "line": "[placeholder]",
-    "tags": ["campaign", "design", "pr"],
-    "cover": null,
+    "slug": "drive-in-cinema",
+    "project": "drive-in cinema iași",
+    "hook": "2,500+ people at the movies, in the middle of a pandemic.",
+    "line": "a night out when going out wasn't allowed",
+    "tags": [
+      "event",
+      "covid",
+      "social"
+    ],
+    "cover": "assets/case-studies/drivein-2.png",
     "meta": {
-      "role": "[placeholder]",
-      "for": "[placeholder]",
-      "when": "[placeholder]",
-      "channels": "[placeholder]"
+      "role": "organizer",
+      "for": "the people of iași",
+      "when": "2020, covid times",
+      "channels": "facebook, radio"
     },
     "sections": {
-      "context": "[placeholder]",
-      "problem": "[placeholder]",
-      "idea": "[placeholder]",
-      "whatWeDid": [],
-      "results": [],
-      "myPart": "[placeholder]"
+      "context": "2020. cinemas closed, concerts cancelled, everyone stuck at home. seeing other people in real life had turned into a luxury, and nobody knew when that would change.",
+      "problem": "people needed to get out and feel normal for a night, but crowds weren't an option. any event had to keep everyone apart and still feel like being together.",
+      "idea": "bring the cinema to the parking lot. every car is its own little room, and the screen is big enough for everyone.",
+      "whatWeDid": [
+        {
+          "title": "cars in a row, screen up front",
+          "text": "a big screen, cars parked in order so every windshield had a view, and a few licensed movies people actually wanted to see."
+        },
+        {
+          "title": "sound through the radio",
+          "text": "no speakers blasting across the lot. the movie played on an FM frequency, so every car had its own sound system and its own volume knob."
+        },
+        {
+          "title": "a food van, because it's a movie",
+          "text": "popcorn and snacks without leaving the car for long. a movie night isn't a movie night without them."
+        },
+        {
+          "title": "promo where people already were",
+          "text": "everyone was chronically online at that point, so all the promo went through facebook. no posters, no flyers, just posts and events."
+        }
+      ],
+      "results": [
+        {
+          "number": "2,500+",
+          "label": "people at the movies"
+        },
+        {
+          "number": "500+",
+          "label": "cars every edition"
+        },
+        {
+          "number": "0",
+          "label": "people sitting next to a stranger"
+        }
+      ],
+      "myPart": "organizing, logistics, social media and promo. making sure 500 cars knew where to park and which frequency to tune in to."
     },
-    "images": [],
-    "featuredOnHome": true
+    "images": [
+      {
+        "file": "assets/case-studies/drivein-1.png",
+        "caption": "people, finally out of the house"
+      },
+      {
+        "file": "assets/case-studies/drivein-2.png",
+        "caption": "the screen, the lot, the movie"
+      }
+    ],
+    "featuredOnHome": false
   },
   {
-    "slug": "dr-max-v8interactive",
-    "project": "dr. max @ v8interactive",
-    "hook": "one pharmacy, three audiences with nothing in common.",
-    "line": "[placeholder]",
-    "tags": ["art direction", "OOH", "social"],
-    "cover": null,
-    "meta": {
-      "role": "[placeholder]",
-      "for": "[placeholder]",
-      "when": "[placeholder]",
-      "channels": "[placeholder]"
-    },
-    "sections": {
-      "context": "[placeholder]",
-      "problem": "[placeholder]",
-      "idea": "[placeholder]",
-      "whatWeDid": [],
-      "results": [],
-      "myPart": "[placeholder]"
-    },
-    "images": [],
-    "featuredOnHome": true
-  },
-  {
-    "slug": "fix-media-stickers",
-    "project": "[band] · fix media records",
+    "slug": "retrebled-stickers",
+    "project": "retrebled",
     "hook": "+3000% streams from a pack of stickers.",
-    "line": "[placeholder]",
-    "tags": ["guerrilla", "music", "print"],
+    "line": "unconventional method of getting streams",
+    "tags": [
+      "guerrilla",
+      "music",
+      "print"
+    ],
     "cover": "assets/case-studies/cs-stickers-europe.png",
     "meta": {
-      "role": "[placeholder]",
-      "for": "[placeholder]",
-      "when": "[placeholder]",
-      "channels": "[placeholder]"
+      "role": "campaign lead",
+      "for": "retrebled band",
+      "when": "2021",
+      "channels": "european cities streetlights"
     },
     "sections": {
-      "context": "[placeholder]",
-      "problem": "[placeholder]",
-      "idea": "[placeholder]",
-      "whatWeDid": [],
-      "results": [],
-      "myPart": "[placeholder]"
+      "context": "the band had just released a new single. it was a banger. too bad that the streams didn't show that. spotify's kinda hard on new artists. we had tried everything. almost.",
+      "problem": "the song wasn't getting the streams it deserved. organic reach was limited and traditional promotion channels had been exhausted.",
+      "idea": "what if we make people curious about the song through unexpected channels?",
+      "whatWeDid": [
+        {
+          "title": "stickers in unexpected places",
+          "text": "we placed stickers with QR codes linking to the song on streetlights and other high-traffic areas in european cities."
+        },
+        {
+          "title": "social media amplification",
+          "text": "we encouraged fans to share photos of the stickers, creating organic buzz and curiosity around the song."
+        }
+      ],
+      "results": [
+        {
+          "number": "3000%",
+          "label": "increase in streams"
+        },
+        {
+          "number": "5",
+          "label": "cities reached"
+        }
+      ],
+      "myPart": "campaign concepts, graphic design. "
     },
     "images": [],
     "featuredOnHome": false

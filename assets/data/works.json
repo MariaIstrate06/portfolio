@@ -1,30 +1,12 @@
 [
   {
-    "id": "vs-digital-bucurat-logo",
-    "branch": "digital",
-    "title": "Bucurat Logo",
-    "meta": "",
-    "file": "assets/digital/vs-digital-bucurat-logo.png",
-    "featured": true,
-    "order": 530
-  },
-  {
     "id": "vs-digital-cash-icon-logo",
     "branch": "digital",
-    "title": "Cash Icon Logo",
+    "title": "Blackcat Events SRL Logo",
     "meta": "",
     "file": "assets/digital/vs-digital-cash-icon-logo.png",
     "featured": false,
     "order": 20
-  },
-  {
-    "id": "vs-digital-cdr-brandbook",
-    "branch": "digital",
-    "title": "Cdr Brandbook",
-    "meta": "",
-    "file": "assets/digital/vs-digital-cdr-brandbook.png",
-    "featured": true,
-    "order": 540
   },
   {
     "id": "vs-digital-dia-titiserv-brandbook",
@@ -81,15 +63,6 @@
     "order": 90
   },
   {
-    "id": "vs-digital-retrebled-blind-game",
-    "branch": "digital",
-    "title": "Retrebled Blind Game",
-    "meta": "",
-    "file": "assets/digital/vs-digital-retrebled-blind-game.png",
-    "featured": false,
-    "order": 100
-  },
-  {
     "id": "vs-digital-sens-brandbook",
     "branch": "digital",
     "title": "Sens Brandbook",
@@ -135,24 +108,6 @@
     "order": 150
   },
   {
-    "id": "vs-print-active-citizens-totebags",
-    "branch": "print",
-    "title": "Active Citizens Totebags",
-    "meta": "",
-    "file": "assets/print/vs-print-active-citizens-totebags.png",
-    "featured": true,
-    "order": 550
-  },
-  {
-    "id": "vs-print-bucurat-cani",
-    "branch": "print",
-    "title": "Bucurat Cani",
-    "meta": "",
-    "file": "assets/print/vs-print-bucurat-cani.png",
-    "featured": true,
-    "order": 560
-  },
-  {
     "id": "vs-print-bucurat-roll-up",
     "branch": "print",
     "title": "Bucurat Roll Up",
@@ -173,25 +128,16 @@
   {
     "id": "vs-print-cdr-banner-stradal",
     "branch": "print",
-    "title": "Cdr Banner Stradal",
+    "title": "Street Banner Cursa de Rățuște",
     "meta": "",
     "file": "assets/print/vs-print-cdr-banner-stradal.png",
     "featured": false,
     "order": 200
   },
   {
-    "id": "vs-print-cdr-billboard",
-    "branch": "print",
-    "title": "Cdr Billboard",
-    "meta": "",
-    "file": "assets/print/vs-print-cdr-billboard.png",
-    "featured": true,
-    "order": 570
-  },
-  {
     "id": "vs-print-cdr-brochure",
     "branch": "print",
-    "title": "Cdr Brochure",
+    "title": "Brochure Cursa de Rățuște",
     "meta": "",
     "file": "assets/print/vs-print-cdr-brochure.png",
     "featured": false,
@@ -200,7 +146,7 @@
   {
     "id": "vs-print-cdr-packaging",
     "branch": "print",
-    "title": "Cdr Packaging",
+    "title": "Cards Deck Packaging Cursa de Rățuște",
     "meta": "",
     "file": "assets/print/vs-print-cdr-packaging.png",
     "featured": false,
@@ -209,7 +155,7 @@
   {
     "id": "vs-print-cdr-statie-autobuz",
     "branch": "print",
-    "title": "Cdr Statie Autobuz",
+    "title": "Cursa de Rățuște Bus Stop",
     "meta": "",
     "file": "assets/print/vs-print-cdr-statie-autobuz.png",
     "featured": false,
@@ -227,25 +173,16 @@
   {
     "id": "vs-print-digital-smile-flyer",
     "branch": "print",
-    "title": "Digital Smile Flyer",
+    "title": "Digital Smile Roll-up",
     "meta": "",
     "file": "assets/print/vs-print-digital-smile-flyer.png",
     "featured": false,
     "order": 260
   },
   {
-    "id": "vs-print-gala-asii",
-    "branch": "print",
-    "title": "Gala Asii",
-    "meta": "",
-    "file": "assets/print/vs-print-gala-asii.png",
-    "featured": true,
-    "order": 580
-  },
-  {
     "id": "vs-print-gloria-breloc",
     "branch": "print",
-    "title": "Gloria Breloc",
+    "title": "Gloria Keychain",
     "meta": "",
     "file": "assets/print/vs-print-gloria-breloc.png",
     "featured": false,
@@ -254,7 +191,7 @@
   {
     "id": "vs-print-gossip-duck",
     "branch": "print",
-    "title": "Gossip Duck",
+    "title": "Gossip Duck - Promotional Magazine",
     "meta": "",
     "file": "assets/print/vs-print-gossip-duck.png",
     "featured": false,
@@ -272,38 +209,11 @@
   {
     "id": "vs-print-retrebled-ticket",
     "branch": "print",
-    "title": "Retrebled Ticket",
+    "title": "Retrebled Sticker Bombing",
     "meta": "",
     "file": "assets/print/vs-print-retrebled-ticket.png",
     "featured": false,
     "order": 310
-  },
-  {
-    "id": "vs-print-retrebled-totebags",
-    "branch": "print",
-    "title": "Retrebled Totebags",
-    "meta": "",
-    "file": "assets/print/vs-print-retrebled-totebags.png",
-    "featured": false,
-    "order": 590
-  },
-  {
-    "id": "vs-print-retrebled-tricouri",
-    "branch": "print",
-    "title": "Retrebled Tricouri",
-    "meta": "",
-    "file": "assets/print/vs-print-retrebled-tricouri.png",
-    "featured": false,
-    "order": 600
-  },
-  {
-    "id": "vs-print-studinsight",
-    "branch": "print",
-    "title": "Studinsight",
-    "meta": "",
-    "file": "assets/print/vs-print-studinsight.png",
-    "featured": true,
-    "order": 610
   },
   {
     "id": "vs-print-volunteer-badge",
@@ -313,42 +223,6 @@
     "file": "assets/print/vs-print-volunteer-badge.png",
     "featured": false,
     "order": 350
-  },
-  {
-    "id": "vs-social-account-cdr",
-    "branch": "social",
-    "title": "Account Cdr",
-    "meta": "",
-    "file": "assets/social/vs-social-account-cdr.png",
-    "featured": false,
-    "order": 360
-  },
-  {
-    "id": "vs-social-account-retrebled",
-    "branch": "social",
-    "title": "Account Retrebled",
-    "meta": "",
-    "file": "assets/social/vs-social-account-retrebled.png",
-    "featured": false,
-    "order": 370
-  },
-  {
-    "id": "vs-social-account-rotaract",
-    "branch": "social",
-    "title": "Account Rotaract",
-    "meta": "",
-    "file": "assets/social/vs-social-account-rotaract.png",
-    "featured": false,
-    "order": 380
-  },
-  {
-    "id": "vs-social-account-tedx",
-    "branch": "social",
-    "title": "Account Tedx",
-    "meta": "",
-    "file": "assets/social/vs-social-account-tedx.png",
-    "featured": false,
-    "order": 390
   },
   {
     "id": "vs-social-bucurat-campaign",
@@ -369,15 +243,6 @@
     "order": 410
   },
   {
-    "id": "vs-social-hertz-room",
-    "branch": "social",
-    "title": "Hertz Room",
-    "meta": "",
-    "file": "assets/social/vs-social-hertz-room.png",
-    "featured": true,
-    "order": 620
-  },
-  {
     "id": "vs-social-retrebled",
     "branch": "social",
     "title": "Retrebled",
@@ -385,15 +250,6 @@
     "file": "assets/social/vs-social-retrebled.png",
     "featured": false,
     "order": 430
-  },
-  {
-    "id": "vs-social-rotaract-xmas",
-    "branch": "social",
-    "title": "Rotaract Xmas",
-    "meta": "",
-    "file": "assets/social/vs-social-rotaract-xmas.png",
-    "featured": true,
-    "order": 630
   },
   {
     "id": "vs-social-sens-carousel",
@@ -466,5 +322,95 @@
     "file": "assets/leadership/vs-lead-training-why-pr-needs-media.png",
     "featured": false,
     "order": 520
+  },
+  {
+    "id": "vs-digital-bucurat-logo",
+    "branch": "digital",
+    "title": "Logo for a Fresh Air Campaign in Bucharest",
+    "meta": "",
+    "file": "assets/digital/vs-digital-bucurat-logo.png",
+    "featured": true,
+    "order": 530
+  },
+  {
+    "id": "vs-digital-cdr-brandbook",
+    "branch": "digital",
+    "title": "Brandbook Cursa de Rățuște",
+    "meta": "",
+    "file": "assets/digital/vs-digital-cdr-brandbook.png",
+    "featured": true,
+    "order": 540
+  },
+  {
+    "id": "vs-print-active-citizens-totebags",
+    "branch": "print",
+    "title": "Active Citizens Totebags",
+    "meta": "",
+    "file": "assets/print/vs-print-active-citizens-totebags.png",
+    "featured": true,
+    "order": 550
+  },
+  {
+    "id": "vs-print-bucurat-cani",
+    "branch": "print",
+    "title": "Bucurat Mugs",
+    "meta": "",
+    "file": "assets/print/vs-print-bucurat-cani.png",
+    "featured": true,
+    "order": 560
+  },
+  {
+    "id": "vs-print-cdr-billboard",
+    "branch": "print",
+    "title": "Billboard Cursa de Rățuște",
+    "meta": "",
+    "file": "assets/print/vs-print-cdr-billboard.png",
+    "featured": true,
+    "order": 570
+  },
+  {
+    "id": "vs-print-gala-asii",
+    "branch": "print",
+    "title": "Editorial Magazine for ASII",
+    "meta": "",
+    "file": "assets/print/vs-print-gala-asii.png",
+    "featured": true,
+    "order": 580
+  },
+  {
+    "id": "vs-print-retrebled-totebags",
+    "branch": "print",
+    "title": "Retrebled Totebags",
+    "meta": "",
+    "file": "assets/print/vs-print-retrebled-totebags.png",
+    "featured": false,
+    "order": 590
+  },
+  {
+    "id": "vs-print-studinsight",
+    "branch": "print",
+    "title": "Studinsight",
+    "meta": "",
+    "file": "assets/print/vs-print-studinsight.png",
+    "featured": true,
+    "order": 610
+  },
+  {
+    "id": "vs-social-hertz-room",
+    "branch": "social",
+    "title": "Hertz Room",
+    "meta": "",
+    "file": "assets/social/vs-social-hertz-room.png",
+    "featured": true,
+    "order": 620
+  },
+  {
+    "id": "vs-social-rotaract-xmas",
+    "branch": "social",
+    "title": "Rotaract Xmas",
+    "meta": "",
+    "file": "assets/social/vs-social-rotaract-xmas.png",
+    "featured": true,
+    "order": 630
   }
 ]

@@ -51,17 +51,12 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://istrateu.ro/receipts/tedxiasi</loc>
+    <loc>https://istrateu.ro/receipts/drive-in-cinema</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://istrateu.ro/receipts/dr-max-v8interactive</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://istrateu.ro/receipts/fix-media-stickers</loc>
+    <loc>https://istrateu.ro/receipts/retrebled-stickers</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
