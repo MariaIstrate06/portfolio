@@ -4,18 +4,18 @@
     "tagline": "jack of all trades, master of puppets"
   },
   "home": {
-    "aboutBlurb": "a creative from iași who never managed to pick just one thing: design, video, sound, and the events where all of it meets. ex-frontend engineer, ex-art director, founder of fix media records.",
+    "aboutBlurb": "a creative from iași who never managed to pick just one thing: design, video, sound, and the events where all of it meets. ex-frontend engineer, ex-art director, founder of <a class=\"blurb-link\" href=\"https://www.instagram.com/fixmediarecords/\" target=\"_blank\" rel=\"noopener\">fix media records</a> and co-founder of <a class=\"blurb-link\" href=\"https://www.instagram.com/fixera.house/\" target=\"_blank\" rel=\"noopener\">fixera media house</a> ",
     "selectedVisualsTitle": "selected visuals",
     "caseStudiesTitle": "some case studies",
     "connectTitle": "let's connect",
     "connectTagline": "open to collaborations, creative projects and the occasional crazy idea.",
-    "footer": "© maria istrate · iași, romania"
+    "footer": "© maria istrate, iași, romania"
   },
   "about": {
     "paragraphs": [
       "i'm maria, a creative from iași who never managed to pick just one thing.",
-      "i studied computer science, spent a few years building interfaces at deloitte, then followed the part of the job i liked most: the ideas. since then i've art-directed pharmacy campaigns at v8interactive, helped sell out every TEDxIași event, convinced a city to buy 3,000 rubber ducks in one week for a children's neuropsychiatry ward, and started a record label (fix media records) and a creative house (fixera media house).",
       "i design, i edit video, i produce and mix music, and i organize the events where all of it gets used. what ties it together is simple: i like making things people actually show up for.",
+      "i studied computer science, spent a few years building interfaces in big corpos, then followed the part of the job i liked most: the ideas. since then i've art-directed campaigns, helped sell out events, convinced a city to buy over 15K rubber ducks for a good cause, and started a record label (fix media records) and a creative house (fixera media house).",
       "got a brief, a stage or a half-crazy idea? i'm probably in."
     ]
   },

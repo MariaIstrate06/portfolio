@@ -124,81 +124,75 @@
   font-size: 0.8em;
 }
 
-/* --- tracklist --- */
-.tracklist-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1em;
+/* --- artists --- */
+.artists h2 {
   margin-bottom: 1em;
 }
 
-.tracklist {
+.artists-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1em;
+}
+
+.artist-card {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid var(--line);
-}
-
-.track-row {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-  padding: 0.9em 0.5em;
-  border-bottom: 1px solid var(--line);
-}
-
-.track-row.selected {
+  gap: 0.4em;
+  padding: 1.2em;
+  border: 1px solid var(--line-2);
+  border-radius: 12px;
   background: var(--surface);
 }
 
-.track-n {
-  color: var(--text-muted);
-  font-size: 0.85em;
-  width: 24px;
-  flex-shrink: 0;
+.artist-card h3 {
+  font-size: 1.2em;
 }
 
-.track-main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background: none;
-  border: none;
-  color: inherit;
-  font-family: inherit;
-  cursor: pointer;
-  text-align: left;
-  padding: 0;
-  min-height: 44px;
-  justify-content: center;
+.artist-line {
+  color: var(--text-muted-2);
+  font-size: 0.9em;
 }
 
-.track-artist {
-  font-size: 0.8em;
-  color: var(--text-muted);
-}
-
-.track-tags {
-  display: flex;
-  gap: 0.4em;
-  flex-wrap: wrap;
-}
-
-.tag-pill {
+.upcoming-badge {
+  align-self: flex-start;
   font-size: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--green);
+  border: 1px solid var(--green);
+  border-radius: 999px;
   padding: 0.2em 0.7em;
+}
+
+.artist-date {
+  color: var(--green);
+  font-size: 0.9em;
+}
+
+.artist-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-top: auto;
+  padding-top: 0.6em;
+}
+
+.artist-link {
+  font-size: 0.8em;
+  padding: 0.45em 0.9em;
   border: 1px solid var(--line-3);
   border-radius: 999px;
   color: var(--text-muted-2);
-  white-space: nowrap;
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-.spotify-link {
-  font-size: 0.8em;
+.artist-link:hover {
   color: var(--green);
-  white-space: nowrap;
+  border-color: var(--green);
 }
 
 /* --- gig log --- */
@@ -250,10 +244,4 @@
   font-style: normal;
   color: var(--text-muted);
   font-size: 0.85em;
-}
-
-@media (max-width: 768px) {
-  .track-tags {
-    display: none;
-  }
 }

@@ -30,9 +30,9 @@ jobs:
         working-directory: istrateu
         run: npm ci
 
-      - name: Build (static, base href /portfolio/)
+      - name: Build (static, base href /)
         working-directory: istrateu
-        run: npx ng build --base-href=/portfolio/
+        run: npx ng build --base-href=/
 
       - name: Use CSR fallback as root index.html
         run: mv istrateu/dist/istrateu/browser/index.csr.html istrateu/dist/istrateu/browser/index.html
@@ -48,3 +48,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: istrateu/dist/istrateu/browser
+          cname: istrateu.ro

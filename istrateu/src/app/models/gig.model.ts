@@ -12,5 +12,5 @@ export interface GigQuote {
 
 export interface GigLog {
   gigs: Gig[];
-  quote: GigQuote;
+  quote?: GigQuote;
 }

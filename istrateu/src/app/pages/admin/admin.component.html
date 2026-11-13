@@ -56,7 +56,7 @@
           {{ saveState === 'saving' ? 'saving…' : 'save changes' }}
         </button>
         @if (saveState === 'success') {
-          <span class="save-status success">saved — live in ~2 min.</span>
+          <span class="save-status success">saved. live in ~2 min.</span>
         }
         @if (saveState === 'error') {
           <span class="save-status error">{{ saveError }}</span>

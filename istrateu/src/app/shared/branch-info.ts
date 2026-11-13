@@ -15,10 +15,13 @@ export interface BranchInfo {
   ink: string;
 }
 
+/** Display order of the branches, used by visual stories and the home page. */
+export const BRANCH_ORDER: WorkBranch[] = ['social', 'digital', 'print', 'leadership'];
+
 export const BRANCH_INFO: Record<WorkBranch, BranchInfo> = {
   digital: {
     anchor: 'digital',
-    num: '01',
+    num: '02',
     name: 'digital graphic design',
     sub: 'logos, identities, album covers, key visuals',
     bg: 'var(--purple)',
@@ -26,7 +29,7 @@ export const BRANCH_INFO: Record<WorkBranch, BranchInfo> = {
   },
   print: {
     anchor: 'physical',
-    num: '02',
+    num: '03',
     name: 'physical graphic design',
     sub: 'banners, billboards, roll-ups, print, editorial',
     bg: 'var(--red)',
@@ -34,7 +37,7 @@ export const BRANCH_INFO: Record<WorkBranch, BranchInfo> = {
   },
   social: {
     anchor: 'social',
-    num: '03',
+    num: '01',
     name: 'social media',
     sub: 'campaigns, carousels, giveaways',
     bg: 'var(--mint)',

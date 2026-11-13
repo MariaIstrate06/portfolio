@@ -33,7 +33,7 @@
 
   <div class="video-meta">
     <span class="video-title">{{ video.title }}</span>
-    <span class="video-role">{{ platformLabel }} · {{ video.role }}</span>
+    <span class="video-role">{{ platformLabel }}, {{ video.role }}</span>
     @if (showExternalLink) {
       <a [href]="externalUrl" target="_blank" rel="noopener noreferrer" class="external-link">
         open on {{ platformLabel }} ↗

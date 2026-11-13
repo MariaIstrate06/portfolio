@@ -9,6 +9,7 @@ import {
   GigLog,
   Events,
   CaseStudy,
+  Artist,
 } from '../models';
 
 @Injectable({ providedIn: 'root' })
@@ -45,6 +46,10 @@ export class ContentService {
 
   getGigs(): Observable<GigLog> {
     return this.load<GigLog>('gigs.json');
+  }
+
+  getArtists(): Observable<Artist[]> {
+    return this.load<Artist[]>('artists.json');
   }
 
   getEvents(): Observable<Events> {

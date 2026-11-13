@@ -4,7 +4,7 @@ import { RouterLink } from '@angular/router';
 import { Observable, map } from 'rxjs';
 import { ContentService } from '../../services/content.service';
 import { Work, WorkBranch } from '../../models';
-import { BRANCH_INFO } from '../../shared/branch-info';
+import { BRANCH_INFO, BRANCH_ORDER } from '../../shared/branch-info';
 import { toFullWebp, toThumbWebp } from '../../shared/image-paths';
 import { LightboxComponent, LightboxItem } from '../../shared/components/lightbox/lightbox.component';
 import { ImgFallbackDirective } from '../../shared/directives/img-fallback.directive';
@@ -19,7 +19,7 @@ type WorksByBranch = Record<WorkBranch, Work[]>;
   styleUrl: './visual-stories.component.css',
 })
 export class VisualStoriesComponent implements OnInit {
-  readonly branches: WorkBranch[] = ['digital', 'print', 'social', 'leadership'];
+  readonly branches: WorkBranch[] = BRANCH_ORDER;
   readonly branchInfo = BRANCH_INFO;
 
   worksByBranch$!: Observable<WorksByBranch>;
@@ -51,7 +51,7 @@ export class VisualStoriesComponent implements OnInit {
   openLightbox(branch: WorkBranch, works: Work[], index: number): void {
     this.lightboxItems = works.map(w => ({
       title: w.title,
-      meta: [this.branchInfo[branch].name, w.meta].filter(Boolean).join(' · '),
+      meta: [this.branchInfo[branch].name, w.meta].filter(Boolean).join(', '),
       image: toFullWebp(w.file),
       fallback: w.file,
       alt: w.title,

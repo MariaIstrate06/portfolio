@@ -4,7 +4,7 @@ import { RouterLink } from '@angular/router';
 import { Observable, map } from 'rxjs';
 import { ContentService } from '../../services/content.service';
 import { CaseStudy, Site, Work } from '../../models';
-import { BRANCH_INFO } from '../../shared/branch-info';
+import { BRANCH_INFO, BRANCH_ORDER } from '../../shared/branch-info';
 import { toThumbWebp } from '../../shared/image-paths';
 
 @Component({
@@ -28,7 +28,12 @@ export class HomeComponent implements OnInit {
 
     this.featuredWorks$ = this.content.getWorks().pipe(
       map(works =>
-        works.filter(w => w.featured).sort((a, b) => a.order - b.order)
+        works
+          .filter(w => w.featured)
+          .sort(
+            (a, b) =>
+              BRANCH_ORDER.indexOf(a.branch) - BRANCH_ORDER.indexOf(b.branch) || a.order - b.order
+          )
       )
     );
 

@@ -4,15 +4,9 @@ import { RouterLink } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Observable } from 'rxjs';
 import { ContentService } from '../../services/content.service';
-import { GigLog, Track } from '../../models';
-import { Chip, ChipRowComponent } from '../../shared/components/chip-row/chip-row.component';
-import { WaveformCanvasComponent } from './components/waveform-canvas/waveform-canvas.component';
+import { Artist, GigLog, Track } from '../../models';
+// import { WaveformCanvasComponent } from './components/waveform-canvas/waveform-canvas.component';
 import { AudioPlayerService, Stage } from './services/audio-player.service';
-
-interface TrackEntry {
-  track: Track;
-  index: number;
-}
 
 const STAGE_LABELS: Record<Stage, string> = { raw: 'raw', production: 'produced', mix: 'mixed' };
 const STAGE_COLORS: Record<Stage, string> = {
@@ -24,7 +18,8 @@ const STAGE_COLORS: Record<Stage, string> = {
 @Component({
   selector: 'app-mixed-feelings',
   standalone: true,
-  imports: [AsyncPipe, RouterLink, ChipRowComponent, WaveformCanvasComponent],
+  // add WaveformCanvasComponent back to imports when the player is uncommented
+  imports: [AsyncPipe, RouterLink],
   providers: [AudioPlayerService],
   templateUrl: './mixed-feelings.component.html',
   styleUrl: './mixed-feelings.component.css',
@@ -33,15 +28,9 @@ export class MixedFeelingsComponent implements OnInit {
   private destroyRef = inject(DestroyRef);
   private isBrowser: boolean;
 
-  readonly filters: Chip[] = [
-    { key: 'all', label: 'all' },
-    { key: 'mine', label: 'my tracks' },
-    { key: 'others', label: 'for others' },
-  ];
-  activeFilter = 'all';
-
   tracks: Track[] = [];
   gigLog$!: Observable<GigLog>;
+  artists$!: Observable<Artist[]>;
 
   selectedIndex = 0;
   peaks: number[] = [];
@@ -59,23 +48,19 @@ export class MixedFeelingsComponent implements OnInit {
 
   ngOnInit(): void {
     this.gigLog$ = this.content.getGigs();
+    this.artists$ = this.content.getArtists();
 
-    this.content.getTracks().subscribe(tracks => {
-      this.tracks = tracks;
-      if (tracks.length) this.selectTrack(0);
-    });
+    // player is hidden for now (see the template). uncomment to load tracks again.
+    // this.content.getTracks().subscribe(tracks => {
+    //   this.tracks = tracks;
+    //   if (tracks.length) this.selectTrack(0);
+    // });
 
     this.player.playing$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(p => (this.playing = p));
     this.player.duration$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(d => (this.duration = d));
     this.player.currentTime$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(t => {
       this.progress = this.duration ? t / this.duration : 0;
     });
-  }
-
-  get filteredTracks(): TrackEntry[] {
-    return this.tracks
-      .map((track, index) => ({ track, index }))
-      .filter(({ track }) => this.activeFilter === 'all' || track.kind === this.activeFilter);
   }
 
   get current(): Track | undefined {
@@ -122,11 +107,6 @@ export class MixedFeelingsComponent implements OnInit {
 
   hasFile(stage: Stage): boolean {
     return !!this.current?.files[stage];
-  }
-
-  trackNumber(n: number): string {
-    const num = n + 1;
-    return num < 10 ? `0${num}` : `${num}`;
   }
 
   private loadPeaks(): void {

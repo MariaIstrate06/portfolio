@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AsyncPipe } from '@angular/common';
+import { AsyncPipe, NgTemplateOutlet } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ContentService } from '../../services/content.service';
@@ -9,7 +9,7 @@ import { ImgFallbackDirective } from '../../shared/directives/img-fallback.direc
 @Component({
   selector: 'app-crowd-control',
   standalone: true,
-  imports: [AsyncPipe, RouterLink, ImgFallbackDirective],
+  imports: [AsyncPipe, NgTemplateOutlet, RouterLink, ImgFallbackDirective],
   templateUrl: './crowd-control.component.html',
   styleUrl: './crowd-control.component.css',
 })

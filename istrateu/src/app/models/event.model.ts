@@ -9,7 +9,7 @@ export interface BigEvent {
   role: string;
   line: string;
   image: string | null;
-  caseStudy: string;
+  caseStudy: string | null;
 }
 
 export interface SmallEvent {

@@ -5,3 +5,4 @@ export * from './track.model';
 export * from './gig.model';
 export * from './event.model';
 export * from './case-study.model';
+export * from './artist.model';

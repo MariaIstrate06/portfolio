@@ -16,23 +16,33 @@
     <h2>the big ones</h2>
     <div class="big-grid">
       @for (e of events.big; track e.name) {
-        <a class="big-card" [routerLink]="['/receipts', e.caseStudy]">
-          <div class="big-image">
-            @if (e.image) {
-              <img [src]="e.image" alt="" loading="lazy" width="480" height="270" appImgFallback>
-            } @else {
-              <div class="image-placeholder"></div>
-            }
+        @if (e.caseStudy) {
+          <a class="big-card linked" [routerLink]="['/receipts', e.caseStudy]">
+            <ng-container *ngTemplateOutlet="cardBody; context: { $implicit: e }"></ng-container>
+          </a>
+        } @else {
+          <div class="big-card">
+            <ng-container *ngTemplateOutlet="cardBody; context: { $implicit: e }"></ng-container>
           </div>
-          <div class="big-body">
-            <h3>{{ e.name }} <span class="years">{{ e.years }}</span></h3>
-            <p class="role">{{ e.role }}</p>
-            <p class="line">{{ e.line }}</p>
-            <span class="read-link">read the case study →</span>
-          </div>
-        </a>
+        }
       }
     </div>
+
+    <ng-template #cardBody let-e>
+      @if (e.image) {
+        <div class="big-image">
+          <img [src]="e.image" alt="" loading="lazy" width="480" height="270" appImgFallback>
+        </div>
+      }
+      <div class="big-body">
+        <h3>{{ e.name }} <span class="years">{{ e.years }}</span></h3>
+        <p class="role">{{ e.role }}</p>
+        <p class="line">{{ e.line }}</p>
+        @if (e.caseStudy) {
+          <span class="read-link">read the case study →</span>
+        }
+      </div>
+    </ng-template>
 
     <h2>also on the list</h2>
     <div class="small-list">

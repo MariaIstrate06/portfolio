@@ -20,12 +20,12 @@
         alt="maria istrate"
         class="about-photo"
         width="260"
-        height="260"
+        height="387"
         loading="lazy"
       >
     </div>
     <div class="about-text">
-      <p>{{ site.home.aboutBlurb }}</p>
+      <p [innerHTML]="site.home.aboutBlurb"></p>
       <a routerLink="/about" class="more-link">more about me →</a>
     </div>
   </section>

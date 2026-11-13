@@ -1,8 +1,9 @@
 <div class="main-mixed">
   <a routerLink="/work" class="back-link">← my work</a>
   <h1>mixed feelings</h1>
-  <p class="subtitle">tracks i made, produced and mixed — and the gigs where i ran the sound</p>
+  <p class="subtitle">tracks i made, produced and mixed, and the gigs where i ran the sound</p>
 
+  <!-- player: hidden for now, uncomment to bring it back (also uncomment getTracks() in the .ts)
   @if (current) {
     <div class="player-card">
       <div class="player-header">
@@ -66,40 +67,43 @@
       </div>
     </div>
   }
+  -->
 
-  <div class="tracklist-header">
-    <h2>tracklist</h2>
-    <app-chip-row [chips]="filters" [active]="activeFilter" (activeChange)="activeFilter = $event"></app-chip-row>
-  </div>
-
-  <div class="tracklist">
-    @for (entry of filteredTracks; track entry.index; let n = $index) {
-      <div class="track-row" [class.selected]="entry.index === selectedIndex">
-        <span class="track-n">{{ trackNumber(n) }}</span>
-        <button type="button" class="track-main" (click)="selectTrack(entry.index)">
-          <span class="track-title">{{ entry.track.title }}</span>
-          <span class="track-artist">{{ entry.track.artist }}</span>
-        </button>
-        <span class="track-tags">
-          @for (tag of entry.track.tags; track tag) {
-            <span class="tag-pill">{{ tag }}</span>
-          }
-        </span>
-        @if (entry.track.spotify) {
-          <a [href]="entry.track.spotify" target="_blank" rel="noopener noreferrer" class="spotify-link">
-            on spotify ↗
-          </a>
+  @if (artists$ | async; as artists) {
+    <section class="artists">
+      <h2>the artists</h2>
+      <div class="artists-grid">
+        @for (a of artists; track a.name) {
+          <div class="artist-card">
+            @if (a.upcoming) {
+              <span class="upcoming-badge">upcoming release</span>
+            }
+            <h3>{{ a.name }}</h3>
+            <p class="artist-line">{{ a.line }}</p>
+            @if (a.upcoming) {
+              <p class="artist-date">{{ a.upcoming }}</p>
+            }
+            @if (a.links.length) {
+              <div class="artist-links">
+                @for (l of a.links; track l.url) {
+                  <a [href]="l.url" target="_blank" rel="noopener noreferrer" class="artist-link">
+                    {{ l.label }} ↗
+                  </a>
+                }
+              </div>
+            }
+          </div>
         }
       </div>
-    }
-  </div>
+    </section>
+  }
 
   @if (gigLog$ | async; as log) {
     <section class="gig-log">
       <h2>gig log</h2>
       <p class="subtitle">live sound. no footage, just the setup notes.</p>
       <div class="gigs-grid">
-        @for (g of log.gigs; track g.event + g.role) {
+        @for (g of log.gigs; track g.date + g.event) {
           <div class="gig-card">
             <span class="gig-date">{{ g.date }}</span>
             <span class="gig-event">{{ g.event }}</span>
@@ -108,10 +112,12 @@
           </div>
         }
       </div>
-      <blockquote class="quote">
-        "{{ log.quote.line }}"
-        <footer>— {{ log.quote.attribution }}</footer>
-      </blockquote>
+      @if (log.quote) {
+        <blockquote class="quote">
+          "{{ log.quote.line }}"
+          <footer>{{ log.quote.attribution }}</footer>
+        </blockquote>
+      }
     </section>
   }
 </div>

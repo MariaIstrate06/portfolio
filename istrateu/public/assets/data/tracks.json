@@ -1,13 +1,12 @@
 [
   {
-    "title": "[track name]",
+    "title": "fur elips",
     "artist": "maria istrate",
     "kind": "mine",
     "tags": ["my own", "produced", "mixed"],
     "files": {
-      "raw": "assets/audio/placeholder-1-raw.mp3",
-      "production": "assets/audio/placeholder-1-production.mp3",
-      "mix": "assets/audio/placeholder-1-mix.mp3"
+      "raw": "assets/audio/fur_elips_0408",
+      "production": "assets/audio/fur_elips_2910.mp3"
     }
   },
   {

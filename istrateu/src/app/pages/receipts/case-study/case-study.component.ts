@@ -31,7 +31,7 @@ export class CaseStudyComponent implements OnInit {
       tap(cs => {
         if (cs) {
           this.seo.update({
-            title: `${cs.project} — maria istrate`,
+            title: `${cs.project} | maria istrate`,
             description: cs.hook,
           });
         }

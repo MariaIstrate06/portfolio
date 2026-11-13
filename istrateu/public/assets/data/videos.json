@@ -49,24 +49,43 @@
     "orientation": "wide"
   },
   {
-    "title": "[reel title]",
-    "role": "[role]",
-    "platform": "tiktok",
-    "url": "[tiktok video url]",
-    "orientation": "vertical"
-  },
-  {
-    "title": "[reel title]",
-    "role": "[role]",
+    "title": "How to Join Cursa de Rățuște 2026",
+    "role": "shot, edited",
     "platform": "instagram",
-    "url": "[instagram reel url]",
-    "orientation": "vertical"
+    "url": "https://www.instagram.com/reel/DYhw7X3NIoB/",
+    "orientation": "vertical",
+    "thumb": "assets/reels/reel-DYhw7X3NIoB.jpg"
   },
   {
-    "title": "[reel title]",
-    "role": "[role]",
-    "platform": "youtube-shorts",
-    "url": "[youtube shorts url]",
-    "orientation": "vertical"
+    "title": "Cursa de Rățuște: The Rematch",
+    "role": "shot, edited",
+    "platform": "instagram",
+    "url": "https://www.instagram.com/reel/DLC__8btZgx/",
+    "orientation": "vertical",
+    "thumb": "assets/reels/reel-DLC__8btZgx.jpg"
+  },
+  {
+    "title": "How to Join Cursa de Rățuște 2025",
+    "role": "shot, edited",
+    "platform": "instagram",
+    "url": "https://www.instagram.com/reel/DJrr1NItRu1/",
+    "orientation": "vertical",
+    "thumb": "assets/reels/reel-DJrr1NItRu1.jpg"
+  },
+  {
+    "title": "istrateu: Major Windows Update",
+    "role": "shot, edited",
+    "platform": "instagram",
+    "url": "https://www.instagram.com/reel/DAA2BzNsDZZ/",
+    "orientation": "vertical",
+    "thumb": "assets/reels/reel-DAA2BzNsDZZ.jpg"
+  },
+  {
+    "title": "AVA: Getting to Know Me",
+    "role": "shot, edited",
+    "platform": "instagram",
+    "url": "https://www.instagram.com/reel/DfPtr-xokqe/",
+    "orientation": "vertical",
+    "thumb": "assets/reels/reel-DfPtr-xokqe.jpg"
   }
 ]

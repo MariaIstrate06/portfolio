@@ -1,32 +1,60 @@
 {
   "stats": [
-    { "number": "[X]", "label": "events organized" },
-    { "number": "[X]", "label": "people in the crowd" },
-    { "number": "3,000", "label": "rubber ducks sold in one week" },
-    { "number": "100%", "label": "of TEDxIași events sold out" }
+    {
+      "number": "30+",
+      "label": "events organized"
+    },
+    {
+      "number": "100,000+",
+      "label": "people in the crowd"
+    }
   ],
   "big": [
     {
       "name": "cursa de rățuște iași",
-      "years": "2025 · 2026",
-      "role": "campaign lead · rotaract iași",
-      "line": "[placeholder]",
-      "image": null,
+      "years": "2025, 2026",
+      "role": "campaign lead, rotaract iași",
+      "line": "a fun duck run for a good cause.",
+      "image": "assets/case-studies/cs-cdr-gossip-duck-packs.png",
       "caseStudy": "cursa-de-ratuste"
     },
     {
+      "name": "drive-in cinema iași",
+      "years": "2020",
+      "role": "organizer",
+      "line": "a night at the movies when going out wasn't really an option.",
+      "image": "assets/case-studies/drivein-2.png",
+      "caseStudy": "drive-in-cinema"
+    },
+    {
       "name": "tedxiași",
-      "years": "2024 · live 2025",
-      "role": "pr lead · core organizing team",
-      "line": "[placeholder]",
+      "years": "2024, live 2025",
+      "role": "pr lead, core organizing team",
+      "line": "community events for everyone, for continuous learning.",
+      "image": "assets/case-studies/tedxiasi.png",
+      "caseStudy": null
+    },
+    {
+      "name": "charity events with rotaract iași",
+      "years": "ongoing",
+      "role": "organizer, rotaract club iași",
+      "line": "fundraisers, donation drives and gatherings that leave a cause a little better off than they found it.",
       "image": null,
-      "caseStudy": "tedxiasi"
+      "caseStudy": null
     }
   ],
   "small": [
-    { "year": "[year]", "name": "drive-in cinema iași", "role": "[role]", "line": "[placeholder]" },
-    { "year": "[year]", "name": "condu prudent! alege viața!", "role": "[role]", "line": "[placeholder]" },
-    { "year": "[year]", "name": "[conference name]", "role": "[role]", "line": "[placeholder]" },
-    { "year": "[year]", "name": "[event name]", "role": "[role]", "line": "[placeholder]" }
+    {
+      "year": "2019",
+      "name": "confestetis",
+      "role": "organizing team",
+      "line": "a plastic surgery conference. doctors, slides, schedules, and making sure everyone was in the right room on time."
+    },
+    {
+      "year": "always",
+      "name": "countless parties",
+      "role": "host, DJ, the one who stays to clean up",
+      "line": "birthdays, house parties and every 'small gathering' that turned into a big one."
+    }
   ]
 }

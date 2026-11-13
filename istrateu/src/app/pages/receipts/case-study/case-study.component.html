@@ -35,23 +35,23 @@
 
     <div class="sections">
       <section class="case-section">
-        <span class="section-eyebrow">01 — context</span>
+        <span class="section-eyebrow">01. context</span>
         <p>{{ cs.sections.context }}</p>
       </section>
 
       <section class="case-section">
-        <span class="section-eyebrow">02 — the problem</span>
+        <span class="section-eyebrow">02. the problem</span>
         <p>{{ cs.sections.problem }}</p>
       </section>
 
       <section class="case-section">
-        <span class="section-eyebrow">03 — the idea</span>
+        <span class="section-eyebrow">03. the idea</span>
         <p class="idea-quote">{{ cs.sections.idea }}</p>
       </section>
 
       @if (cs.sections.whatWeDid.length || cs.images.length) {
         <section class="case-section">
-          <span class="section-eyebrow">04 — what we did</span>
+          <span class="section-eyebrow">04. what we did</span>
 
           @if (cs.sections.whatWeDid.length) {
             <div class="tactics-grid">
@@ -84,7 +84,7 @@
 
       @if (cs.sections.results.length) {
         <section class="case-section">
-          <span class="section-eyebrow">05 — results</span>
+          <span class="section-eyebrow">05. results</span>
           <div class="results-grid">
             @for (r of cs.sections.results; track r.label) {
               <div class="result-tile">
@@ -97,7 +97,7 @@
       }
 
       <section class="case-section">
-        <span class="section-eyebrow">06 — my part</span>
+        <span class="section-eyebrow">06. my part</span>
         <p>{{ cs.sections.myPart }}</p>
       </section>
     </div>
@@ -105,7 +105,7 @@
     @if (nextCase$ | async; as next) {
       <a class="next-case-card" [routerLink]="['/receipts', next.slug]">
         <span class="next-label">next case</span>
-        <span class="next-title">{{ next.project }} — {{ next.hook }}</span>
+        <span class="next-title">{{ next.project }}: {{ next.hook }}</span>
         <span class="arrow" aria-hidden="true">→</span>
       </a>
     }

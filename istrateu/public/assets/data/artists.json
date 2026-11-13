@@ -1,0 +1,40 @@
+[
+  {
+    "name": "istrateu",
+    "line": "my own songs. written, produced and mixed by me.",
+    "links": [
+      {
+        "label": "spotify",
+        "url": "https://open.spotify.com/artist/0MD5WZoPwnWHB4OzwLM2aV?si=tPweF7orTTa5rmV5KP8pyw"
+      },
+      {
+        "label": "youtube",
+        "url": "https://www.youtube.com/channel/UCL2utt0A4cYWWmTjklNzXXg"
+      },
+      {
+        "label": "apple music",
+        "url": "https://music.apple.com/ro/artist/istrateu/1744250009"
+      }
+    ]
+  },
+  {
+    "name": "ReTrebled",
+    "line": "the band. yes, the one with the stickers.",
+    "links": [
+      {
+        "label": "youtube",
+        "url": "https://www.youtube.com/@retrebled7346"
+      },
+      {
+        "label": "apple music",
+        "url": "https://music.apple.com/ro/artist/retrebled/1549006237"
+      }
+    ]
+  },
+  {
+    "name": "AVA",
+    "line": "joi, single",
+    "upcoming": "out 26 november",
+    "links": []
+  }
+]

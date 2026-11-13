@@ -1,12 +1,28 @@
 {
   "gigs": [
-    { "date": "[date]", "event": "[event] · [venue]", "role": "FOH engineer", "note": "[placeholder]" },
-    { "date": "[date]", "event": "[event] · [venue]", "role": "monitors", "note": "[placeholder]" },
-    { "date": "[date]", "event": "[event] · [venue]", "role": "live sound + recording", "note": "[placeholder]" },
-    { "date": "[date]", "event": "[event] · [venue]", "role": "FOH engineer", "note": "[placeholder]" }
-  ],
-  "quote": {
-    "line": "[a line from an organizer or artist about how the show sounded]",
-    "attribution": "[name, role]"
-  }
+    {
+      "date": "2026",
+      "event": "zilele limbii române, grădina botanică iași",
+      "role": "FOH engineer",
+      "note": "PA up for the whole day. a string quartet that had to sound like a string quartet, plus a speaking panel where every word had to reach the back row."
+    },
+    {
+      "date": "2025",
+      "event": "zilele limbii române, grădina botanică iași",
+      "role": "FOH engineer",
+      "note": "same garden, same PA. this time a choir, then a vocalist and piano duet. two very different setups, one afternoon."
+    },
+    {
+      "date": "2024, 2025",
+      "event": "cursa de rățuște, bahlui river",
+      "role": "FOH engineer",
+      "note": "outdoors, by the river, thousands of people and a race commentary that had to reach all of them. the ducks didn't complain."
+    },
+    {
+      "date": "on request",
+      "event": "private parties",
+      "role": "DJ",
+      "note": "birthdays, celebrations and the occasional 'just one more song'. reading the room is half the job."
+    }
+  ]
 }
