@@ -21,13 +21,6 @@
   gap: 1em;
 }
 
-.download-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5em;
-  font-size: 1em;
-}
-
 .disclaimer {
   font-style: italic;
   color: var(--text-muted);
